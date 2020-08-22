@@ -1,0 +1,97 @@
+var clModel={
+  "Global": {
+    "mlText": {},
+    "AppExePath": "C:\\Users\\ADMIN\\AppData\\Local\\Apps\\2.0\\RVNMT7A2.0TD\\DY5YGNMP.3QT\\clst..tion_e037103e685ec573_000c.0000_f041fdfa85d08656"
+  },
+  "Id": "8007c49e-e500-46c3-b4a6-0facd590af77",
+  "Dir": ".",
+  "Name": "New",
+  "SourceFileName": "New.clbx",
+  "OutputFileWithoutExtension": "New",
+  "FileType": 2,
+  "TypeStr": "book",
+  "Title": "New",
+  "LogoFileName": "New-logo.png",
+  "TrackingId": null,
+  "PDFFileName": "New.pdf",
+  "FeedbackEmail": null,
+  "tColor": "77, 152, 206",
+  "tColorLightLight": "130, 182, 220",
+  "tColorLight": "85, 157, 208",
+  "tColorDark": "73, 144, 195",
+  "tColorDarkDark": "53, 106, 144",
+  "doPreview": 0,
+  "doFeedbackSection": false,
+  "Steps": [],
+  "MetaData": {},
+  "ObjectIDs": [
+    "PDF",
+    "DOCX"
+  ],
+  "ChapterStart": null,
+  "LCID": 1033,
+  "RootLCID": 1033,
+  "LCIDList": null,
+  "WordIndexStr": "ifsapps9|$enter|0,ifsapps9|0,text|0,the|0,",
+  "IconList": {},
+  "IconRef": {},
+  "Copyright": "ClickLearn ApS",
+  "Chapters": null,
+  "VideoWidth": 1360,
+  "VideoHeight": 768,
+  "VideoArguments": "",
+  "ImageExtension": "jpg",
+  "InsideHelpType": null,
+  "References": null,
+  "PublishSettings": [
+    {
+      "tag": "recording-fontfamily",
+      "value": "Palatino Linotype"
+    },
+    {
+      "tag": "recording-h1",
+      "value": "30"
+    },
+    {
+      "tag": "recording-h2",
+      "value": "25"
+    },
+    {
+      "tag": "recording-h3",
+      "value": "20"
+    },
+    {
+      "tag": "recording-h4",
+      "value": "15"
+    },
+    {
+      "tag": "recording-h5",
+      "value": "10"
+    },
+    {
+      "tag": "recording-h6",
+      "value": "5"
+    },
+    {
+      "tag": "recording-paragraphsize",
+      "value": "30,15"
+    },
+    {
+      "tag": "recording-paragraphcolor",
+      "value": "green"
+    },
+    {
+      "tag": "recording-produceshowme",
+      "value": null
+    },
+    {
+      "tag": "recording-producetryme",
+      "value": null
+    },
+    {
+      "tag": "recording-producetestme",
+      "value": null
+    }
+  ],
+  "tColorHtml": "#4D98CE"
+};

@@ -1,0 +1,237 @@
+var clModel={
+  "Global": {
+    "mlText": {
+      "Videos": "Videos",
+      "Downloads": "Downloads",
+      "Assist": "Assist",
+      "DOCX": "Word",
+      "PDF": "PDF",
+      "PPTX": "PowerPoint",
+      "JSV": "Show Me",
+      "JSV2": "Try Me",
+      "JSV3": "Test Me",
+      "SWF": "Media Player",
+      "XAP": "SilverLight",
+      "TOC": "Table of Content",
+      "cldocid": "ID",
+      "clauthor": "Author",
+      "clrevision": "Revision",
+      "Feedback": "Feedback",
+      "FeedbackRating": "Your rating",
+      "FeedbackComment": "Your comment",
+      "FeedbackSubmit": "Submit",
+      "FeedbackR1": "Bad",
+      "FeedbackR2": "Poor",
+      "FeedbackR3": "Average",
+      "FeedbackR4": "Good",
+      "FeedbackR5": "Great",
+      "WMV": "Window Video",
+      "REF": "References",
+      "Search": "Search...",
+      "DownloadPDF": "Download full portal",
+      "Description": "Description",
+      "FeedbackTitle": "Something’s missing?",
+      "FeedbackQuestion": "Can’t find what you are looking for in the documentation?",
+      "FeedbackAction": "Click to contact us!",
+      "Sitemap": "Content",
+      "GCassistChrome": "Google Chrome browser required",
+      "GCassistChromeMessage": "To use the ClickLearn Assist for web applications you are required to use the Google Chrome browser.",
+      "GCassistExtension": "ClickLearn Chrome Assist Extension required",
+      "GCassistExtensionMessage": "To use the ClickLearn Assist for web applications you are required to install the ClickLearn Chrome Assist Extension. Click the button below to install now.",
+      "GCassistExtensionBtn": "Install extension",
+      "GCassistMsgInstallOk": "Extension installed",
+      "GCassistMsgInstallOkMessage": "Please refresh the page by pressing F5 and then click the Assist link again.",
+      "GCassistMsgInstallError": "Extension failed to install",
+      "GCassistMsgInstallErrorMessage": "Failed to install the extension. Error message was: $1",
+      "GCassistMsgInstallException": "Extension failed to install",
+      "GCassistMsgInstallExceptionMessage": "Failed to install the extension. Exception was: $1",
+      "GCassistMsgLoadJSException": "Failed to load assist script",
+      "GCassistMsgLoadJSExceptionMessage": "Failed to load the assist script. Exception was: $1"
+    },
+    "AppExePath": "C:\\Users\\ADMIN\\AppData\\Local\\Apps\\2.0\\RVNMT7A2.0TD\\DY5YGNMP.3QT\\clst..tion_e037103e685ec573_000c.0000_f041fdfa85d08656"
+  },
+  "Id": "a7e679f7-8138-44c1-a929-d46cff175eb7",
+  "Dir": "..",
+  "Name": "ifsapps9",
+  "SourceFileName": "ifsapps9.clrx",
+  "OutputFileWithoutExtension": "ifsapps9",
+  "FileType": 1,
+  "TypeStr": "recording",
+  "Title": "ifsapps9",
+  "LogoFileName": "ifsapps9-logo.png",
+  "TrackingId": null,
+  "PDFFileName": "ifsapps9.pdf",
+  "FeedbackEmail": null,
+  "tColor": "77, 152, 206",
+  "tColorLightLight": "130, 182, 220",
+  "tColorLight": "85, 157, 208",
+  "tColorDark": "73, 144, 195",
+  "tColorDarkDark": "53, 106, 144",
+  "doPreview": 0,
+  "doFeedbackSection": false,
+  "Steps": [
+    {
+      "Id": "dfec52de-fab3-4589-b288-36f259edf191",
+      "Cmd": "Keyboard",
+      "ImageFileName": "ifsapps9-dfec52de-fab3-4589-b288-36f259edf191",
+      "AssistPreviewImage": null,
+      "FrameFileNames": null,
+      "Pars": {
+        "1": " ",
+        "Source": "<Step cmd=\"Keyboard\" id=\"dfec52de-fab3-4589-b288-36f259edf191\" ms=\"1123085203\"><Arg1> </Arg1><Par1>KEYBOARD</Par1><Par2> </Par2><X><lt><l lcid=\"16393\">370</l></lt></X><Y><lt><l lcid=\"16393\">128</l></lt></Y><W><lt><l lcid=\"16393\">16</l></lt></W><H><lt><l lcid=\"16393\">16</l></lt></H><Offset><lt><l lcid=\"16393\">177746</l></lt></Offset><Offset2><lt><l lcid=\"16393\">177746</l></lt></Offset2></Step>",
+        "0": "Keyboard"
+      },
+      "Rect": "370, 128, 16, 16",
+      "Offset": 177746,
+      "TemplatedText": "Enter the text <font color=\"red\"><b> </b></font>.<br/>",
+      "DictionaryText": [
+        {
+          "tIdx": 0,
+          "tType": 1,
+          "tObj": null,
+          "tText": "Enter the text "
+        },
+        {
+          "tIdx": 1,
+          "tType": 0,
+          "tObj": {
+            "font": {
+              "@color": "red",
+              "b": " "
+            }
+          },
+          "tText": null
+        },
+        {
+          "tIdx": 2,
+          "tType": 2,
+          "tObj": null,
+          "tText": null
+        },
+        {
+          "tIdx": 3,
+          "tType": 1,
+          "tObj": null,
+          "tText": " "
+        },
+        {
+          "tIdx": 2,
+          "tType": 5,
+          "tObj": null,
+          "tText": null
+        },
+        {
+          "tIdx": 1,
+          "tType": 5,
+          "tObj": null,
+          "tText": null
+        },
+        {
+          "tIdx": 4,
+          "tType": 1,
+          "tObj": null,
+          "tText": "."
+        },
+        {
+          "tIdx": 5,
+          "tType": 4,
+          "tObj": null,
+          "tText": null
+        }
+      ],
+      "FlowTags": "",
+      "Steps": null
+    },
+    {
+      "Id": "b996024d-6c71-492a-8e3a-9b59969c2b48",
+      "Cmd": "ControlCollection",
+      "ImageFileName": "ifsapps9-b996024d-6c71-492a-8e3a-9b59969c2b48",
+      "AssistPreviewImage": null,
+      "FrameFileNames": null,
+      "Pars": {
+        "2": "",
+        "3": "mol test",
+        "1": ""
+      },
+      "Rect": "0, 0, 0, 0",
+      "Offset": 0,
+      "TemplatedText": "",
+      "DictionaryText": [],
+      "FlowTags": null,
+      "Steps": null
+    }
+  ],
+  "MetaData": {},
+  "ObjectIDs": [
+    "JSV",
+    "PDF",
+    "DOCX",
+    "PPTX"
+  ],
+  "ChapterStart": null,
+  "LCID": 1033,
+  "RootLCID": 1033,
+  "LCIDList": null,
+  "WordIndexStr": "",
+  "IconList": {},
+  "IconRef": {},
+  "Copyright": "ClickLearn ApS",
+  "Chapters": null,
+  "VideoWidth": 1024,
+  "VideoHeight": 576,
+  "VideoArguments": "",
+  "ImageExtension": "jpg",
+  "InsideHelpType": null,
+  "References": null,
+  "PublishSettings": [
+    {
+      "tag": "recording-fontfamily",
+      "value": "Palatino Linotype"
+    },
+    {
+      "tag": "recording-h1",
+      "value": "30"
+    },
+    {
+      "tag": "recording-h2",
+      "value": "25"
+    },
+    {
+      "tag": "recording-h3",
+      "value": "20"
+    },
+    {
+      "tag": "recording-h4",
+      "value": "15"
+    },
+    {
+      "tag": "recording-h5",
+      "value": "10"
+    },
+    {
+      "tag": "recording-h6",
+      "value": "5"
+    },
+    {
+      "tag": "recording-paragraphsize",
+      "value": "30,15"
+    },
+    {
+      "tag": "recording-paragraphcolor",
+      "value": "green"
+    },
+    {
+      "tag": "recording-produceshowme",
+      "value": null
+    },
+    {
+      "tag": "recording-producetryme",
+      "value": null
+    },
+    {
+      "tag": "recording-producetestme",
+      "value": null
+    }
+  ],
+  "tColorHtml": "#4D98CE"
+};

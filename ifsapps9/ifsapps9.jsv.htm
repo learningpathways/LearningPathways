@@ -1,0 +1,2629 @@
+
+          <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+          <html xmlns="http://www.w3.org/1999/xhtml">
+          <head>
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+        <title>ifsapps9</title>
+          <style type="text/css">
+        
+          html {
+          height: 100%;
+          }
+          body
+          {
+          font: 12pt Verdana;
+          margin:0;
+          padding:0;
+          height:100%;
+          overflow:hidden;
+          }
+          .clvcchapters div
+          {
+          margin: 2px;
+          padding:2px;
+          }
+          .clvcchapters div:hover
+          {
+          background:#404040;
+          }
+          .clvccontrol
+          {
+          position:absolute;
+          bottom:0;
+          width:100%;
+          background:black;
+          opacity:0.9;
+          color:white;
+          display:none;
+          }
+          .clvccontrol div span.clvcicon:hover
+          {
+          background-color: #606060;
+          }
+          .clvcinfo
+          {
+          float:left;
+          font-size:10px;
+          display: inline-block;
+          margin-right:4px;
+          padding-top:4px;
+          }
+          .clvcicon
+          {
+          background-repeat: no-repeat!important;
+          background-position: center!important;
+          background-size:16px 16px!important;
+          width: 16px;
+          height: 16px;
+          display: inline-block;
+          border: solid 1px #202020;
+          border-radius:3px;
+          padding:2px;
+          }
+          .clvcpopup
+          {
+          position:absolute;
+          bottom:32px;
+          background:black;
+          color:white;
+          padding:4px;
+          display:none;
+          text-align:left;
+          border:solid 2px #a0a0a0;
+          border-radius: 4px;
+          }
+          .clvcfullscreen_on
+          {
+          background: url(data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAAZElEQVR42u3WSwoAIAgE0Lr/octlROoYImK5reZB2KcPqqZUp5LGoYw0kIag2IMQgrk1g4TB68OhNei02AKdsti93wNQiJsHdZRHfehDOuTe3mEHtu5dd4NYsDwPXz0IwVL96yac16/TInPCJgAAAABJRU5ErkJggg==);
+          }
+          .clvcfullscreen_off
+          {
+          background: url(data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAAZUlEQVR42u3WSwoAIAgFQL3/oStaRWg9Q0IscZkOhH24ELVcB/fUA+oRBtohKPYghGBuw7DC4Prr0NhIKrZAUi917+cGKKStgybKIz70oT3kPt7XDmzeu+4EsWBxHr58EIKF+tdVm7xX96aHZE8AAAAASUVORK5CYII=);
+          }
+          .clvcplay_on
+          {
+          background: url(data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAAoElEQVR42u3VwQqCQBSFYe++12vfxsBXEYosxbWLXqJXisqy1uM/4N259EiFBw4X3XwwM46WzBRboN+EQggpY00vtDazjwrqGKvh8Up3tAJ8Tw2Fkde3ASwBOyXkudM9PQG+lJDnQQ+0AHwqIU8bsYgCtkrIE5fxSPOxPZwS8jRAm7+A5EsnPwzy4y3/YCVX0GyXasbY0nOi/E0oskDfD/UBkWobNxB+jwAAAABJRU5ErkJggg==);
+          }
+          .clvcplay_off
+          {
+          background: url(data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAAXklEQVR42mNkoBNgHLWIqhb9//+fC0iJYZF6w8jI+AWqhgdIiWBR8wqo5huxFgUAqfVYpBKBhiyAqkkAUvOxqAkEqtkwatGoRaMWjVo0atGoRVSwiD4VHy3AqEVkAwBWLbQbZjL0MAAAAABJRU5ErkJggg==);
+          }
+          .clvcscale_on
+          {
+          background: url(data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAABKElEQVR42u2Wz0oCURTGvbSoReCfTW6jFplIRPoEUYgti96krYu2vYkUuCmi6AlMIUJQAtvqphRc1CJuv4lvYLoMg6CIyFz48TFnzpzvnDMwjEnM6ZjlM7LW1tA9qEPNGNOcRWHqHiDncAovnpF1cgbeDehBG7owhJF0qLyUSEpzsANbanzDncg3uoIz2JzRtt7hGi7+GbEyo5Gz6uheDzypa7/zpOL+hCNxqHj5b1XG9FXPhhoFdhwaj3gn0XVio9goNoqNFsiIyzUkD8/KvYN0gJTi3gf1M0BF8SK0KfcVasSpwokSVyaZIuL8qNFbuHSN/PMNr/AGHWjBh9N9wpkyA/uwC9tQgNVgUc/oBi3Bgzp4ZOzxNONQcx050oaOobGEf0HzMvoFc2UlNi2Pdp4AAAAASUVORK5CYII=);
+          }
+          .clvcscale_off
+          {
+          background: url(data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAABJ0lEQVR42u2WwUoCURSG79DCFoLWprZSiywiJHuCMMKWSm/i1kVb30QM2hRi9ARWECIUgW1tUw60yIVM38Q/MF6GQUgkZA58HO6ZM+c/51wYxjELMmf5hDxjmvgDuIImyg/zKEzdQ9w5VODJF/KsnHf/AQygDy8wAld+pLysyMjnYQe21PiGPVEg1IAq5Oa0rTdoQW1KyNF9cdhUR229cKeug84zigcTuuJY8dPfVRkzVD0vUii048h4zJ3E10mEEqFEKBH6R0IcVnF7cK/cG1gLkVXc/6B+higrXoQ+xb4jhbA6nClxZZYpYmyiRq/hwhYKbAw9eIVneIQPq3tjTbkOBdiFbdiHVLioL3SJP4KOOrhl7K+/jEPNNK6kDZ1Adwn/ghYl9APVhalPhcdlpgAAAABJRU5ErkJggg==);
+          }
+          .clvcsound_on
+          {
+          background: url(data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAACEElEQVR42s2VzStmURzHz0WiRLMYeR1v42XvEbEyMXY2dlOkwV6SMBbktSyEjfIyKaUspFjIgs0wNZI/YExeIslGJEl5fH7dk67HeXjunTw59en3cs/5fe8997xYKkzNendCfr8/GTMAJ5Zldb2JECKpmHXIgzuEog19CjFTMAcj9Ll3JUSBdMwG5DwOohn6fcWs6pq/oJZuByEJMThDi2Q9ebsAIfrFk7rEVhL+BJmBfSgmf/6iEIOytcinZ/PtEKJfB6YXWkiPEX/AX4Yy2IIv5G+tICKftUia6XmAUB1mVoc/eDRA7iP+H8iEDnJDprnOV/aPTwn2tYapa8JMQAT08LibXLmucyqCFgn5gVXKXYuHRfgH7RS+oM43/WWRkE/uL7ltfB/Ui5DfpYg0mZojiIUT+R8UPqTUJH4jjBI3E3/Hn4YFT0IydQwrUPaekf0zTKqNXCn+JuwQ+4hL8H/Drmch/W9kZcme2SOVS5yIfwaXxAnESfofXb1/obBMHU3efE/Zq8+5GOSsa1BBFoOX5S2rbQUOoFUv7xr8eYhSpuUdWMHjhpXTYUbZe8i8YU2FXB5B1ZglZZ+bnTwaDOkIchTI1m+U8YpQO6YfmkmPuzpUHUVevSboI34MqRtP14SjUKgXXwVmTXm5+BxFnFf5NQXiDH2K9NcI7q9yRyHZ5d1wTJG+UMe5FvrfFjahBz8TM6hPZdqjAAAAAElFTkSuQmCC);
+          }
+          .clvcsound_off
+          {
+          background: url(data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAABYElEQVR42r2Wu0oEMRSGEyu1EVSW9YKiiKIo1hbbWO2TuMX2shbWLgiWamNlY6824gV8CN/AwicQK/1iUoRxTjLJjhP455/J5XzDZDgnWjXUdOOgb6XmsQd0jwb6t0tuDE5jx+iDucMU0DL2hibRBepLMDpnsUe0i76YN5706Qiwj92GYDy0sCe07QWJbsGfCSEYl7aDbBWCpIMkGJpDz2ijJEgeqAR2jfbQmhAkH+TB7tBEJEjWHt1gXTQ0vy3PB9xfhl4qF+T/ZUcO1lN2r7QQZGRQJVhdoCisTlAQVjcoBBuL5cZUkAQL5kYJ9Ip16oaVgUzflNdlUo4pHTMB2JmKZP1KhY9VO8qWhZYAi2b9yhWWVZvKJtV2DiyplLNq3cEWCm+r3bgISz4zsGoVe0FLRVAIlnU4cWXfwFbQp7ZB/XEfdsj4afYpiGCL2Al6J8igZNzArpSFnDd/3Prv9gOMRX0bJVh9TgAAAABJRU5ErkJggg==);
+          }
+          .clvcnext
+          {
+          background: url(data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAAUElEQVR42mNkoBNgHLVo6Fr0HwjgioCAkBpCaomyCJchNLMI3SCaWoRsGM0tghlIF4sI+XbUolGLhmjypkuGpUsRRPNClabVBLXBqEWD3yIAJ3FoG8Xd4eIAAAAASUVORK5CYII=);
+          }
+          .clvcinput
+          {
+          background: url(data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAADL0lEQVR42qWWe2hPYRjH32PmknJpycjSkD8YuSW5hLahWUniJ4sSs/xsiLQaNZRbSRjbskW2DPuHP2bNNMyk5JZLUzISmRFWFGbz83k67+H07vzOGd769Jzznu/zPO/9PZYKKJFIpBdmNIx1IeWRi0bLsr75xbF8EgzE7IZV0D2gPe1wEraR8H2XEpFAgoZhJ/SHDngKD109UK7ejYNREAOtkA+FJGyPmogkwzBVkKSrqmEjTs8Chnck5jCk6arHkI7fy06JEPfE3IDJ0ASbEFYFzaGRMB1zCEbAHZhBjO9mokLMOngBExG0egQKYdbq1+NoznloZLjvQSIUoQn/TsTH5ZjT0AbT+HjXI8BSjBk4hLbSQzsJcxN6QAaaCifRc92CbCqPRRmWMswKo7oc/coo+vWYozJCaIZbVAzl5RV8gjgqI1EcSzBrjOpS9JlR9NKJDzAAEiw97mehGqcFPhMtSUqM6tX4nPDxuajslbhMEh3hIUfZm22Pj5OsSpm7MbrqCYzHp83HJ0/Zm75AEl3nYSbMx+mS8iloszDF+jWMvihAPw9TAw2S6BQPMqEbcCzwcZqLOaD+nHW3IRefqz4+2dIbKLNcrazEKeQhHoy5AFOixLsFi/Bt9vA9I/MDWZJIWijnWDPiIYawG6YOZiv/cg2S8f9p+MtqllWdZOlgH6EfpCCucwljlb30BwUkalGyhC3rh8s3BXNZOdtGV8rKyNMOcvy8cTnIXSTDKwdnvCtpi0YO3GJ8Go3hvq+1u/iW7ySK0UM0S9kH6xzzmO9qMWLJQkklVof7UI3XrRDru6d8kiQoe5UtlDmHCcSRXne6j5wNVoEg4y8SyOG5GbZDH/gCacRocDRmolrpKmQiKjW+yR3zFd5BX2Vfjg6peg6lyGm+Bf/Xbn/30MkVvAPkJyMR4VtdP1XZG3W6I1Xe/xqyGHLwu+LVa0tPnpx3ckHJ/8ESxOd1D/bKu9bKRSjnWpy2Etj5h3gA9X4LSBLlYvfplsr8yD2fDIshVg/XQdhPoM963ylzcwYVy3XpmUUClcsEm+P9L0USbcXKPSR3fW9lL/F6qCVB0/8mcMovJQBZDBQRXM0AAAAASUVORK5CYII=);
+          }
+          .cljsvNoteText
+          {
+          border:solid 2px white;
+          background:black;
+          color:white;
+          text-align:center;
+          display:none;
+          padding:4px;
+          opacity:0.80;
+          margin-bottom:28px;
+          }
+          .cljsvIntroTitleText
+          {
+          color:White;
+          text-align:left;
+          display:none;
+          padding:4px;
+          padding-bottom:128px;
+          font:20pt Verdana;
+          padding-bottom: 10vw;
+          font-size:4vw;
+          }
+          .cljsvIntroDescText
+          {
+          color:White;
+          text-align:left;
+          font:10pt Verdana;
+          }
+          .cljsvChapterText
+          {
+          color:white;
+          text-align:center;
+          padding:4px;
+          font:20pt Verdana;
+          }
+          .cljsvChapter
+          {
+          position:absolute;
+          top:0px;
+          left:0px;
+          width:100%;
+          height:100%;
+          background:black;
+          opacity:0.0;
+          display:none;
+          }
+          .cljsvQuestion
+          {
+          display:none;
+          width:100%;
+          height:100%;
+          position:absolute;
+          left:0px;
+          top:0px;
+          }
+          .cljsvQuestion button
+          {
+          margin: 4px;
+          }
+          .cljsvQuestionImg0
+          {
+          background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAFcElEQVR42u2be4hVVRTG9xjaQ0upCTOIDIrMrEAEkx5YTU1lUySaNKFmkP1TZCCZhWlFaC9MiqjEsLSiVKxsEB0U/yh7kFBhZPSgokyoSCUrjbr9lmff6cyeve8995x9zr52WvCxYGbP/tb65uzHWXufFlVyawkdQGgLKkClUul/MIiWlj//swKQ5OG4NnA+OBGcAIZpHKeb/Qx+ALu0F7wNuhHnj0NOAJIejLsSXAuuAINSdrUPrAdrQRdi7GlqAUh8BO4BcA3o7zlWGSavg3kIsaOpBCBxebQXgJvAYZ4TN+0v8JzwIcTOoAKQ+DG4ueB2cGTOiZv2O1gCFiLE3sIFIPnTcevAaQUnbtrnoAMRPitMAJJvx70CBgdOvmoyOU5BhA25C0Dys3CPqvzHeqMmc8NsRHg8NwFI/gncraEzrWNPIsJt3gXQ//nFobNLaHckfRISCaDHfJdqvsfeZTIcJiSZE+oKoGf795T/CU92eTKDfwOGguHa+9qcycQ4tt7qUJNMr/MfKH9LnWxcHgSv2TYx8B2BOxfMVtFWOqsYIvCYWvuEegIsxN3lIfEKuAcsTvpyA/coFW10Ls7IvQjOuQ0LoLe3Xyg/O7z5BHG/0f94nGAA+BCsps3fRpuBuC1gTAZu2TGe6to21xLgWdzNHpLfCHm70fctuKeNdt2gnbYVo63MC++qaI5Ia0vpd2ZiAfRb3XblZ9afCflSo/+PcGdb2l5N23WWeCT4ZzLEIKvCKNtbpEuAVbhJHpJXmvgTo/+vcSdb2j5E2z5zDu3PUdEwyWIyxCbXFUAXM35U/t7np0K80uCQ/lstbZfTdoYlJnkSZSY/KkMcUk843iyq2AS4HveSp+TFZAPVUR3b9C/L3DuOto/Q7k7bL/i7rbhxGWPppP+X6wnwKm5y4i6TmTy+MqlK8lImO9rR7kYCfN4hwDbc6IxxrKL/65wC6ALmTyp9DS+ryaZlm0MAKZgOzdj/r6AVjv0uASbg3gyUvAyRQQT3myX54bivlJ9t8lVwdLkE8LXzS2OfEthIqzKVygLcfE88vVYaUwAZf9MCCTCdwF6wJH8K7n1lXzXS2Ap4enI0BZDXx8sCJC8bo9GWrfAQFa0YIzxybYKnzSXAx7izAghwufnuro/N5GcXeebqNdRMAVwblDxtLQFNNH9ILMtx03Pg2wPfkD4CaMX3q2IPTGV3N5KAvjfikH3/jNS91jdZbfY1gwBSxX0sFoMUYFaDS3Pm7SuADqDoISDv6V9qbqk7vKWy7/bq2V44e8p7ISfBXQQyLMa9TEVni3nbDnjPcAmwUeX/+FVtDYFM0ryyLHUXxLsZ3ktcAhS5EVpCILM0r/znlxXEuxLeqS4BFuHmFBTIARXV68SkLljU6fLDCNCToylAB+6NggIJZb3KbqYAUpeX1+GBoaPMyWTpa42X5m0FEZ/1wGazPnVBmwCduBcLCGaLik6d5Gm7EJxZAOcNCNCr3FdEUdS03Sqqza2PcfbD3a2iC1Z5WbKiqA4oz2EwjSBWOHjlyevMiTdZWVwH4vNgJG6/EMSxrl/CO1ZFp0C+rbGDER2Mr6OxuG0liPNqcEq1OPWNrxrW2NGYDsbn4WjVviOQk2pwykS43XPy6Q5HdUB5FEnHEYz1MYfvXtx9nvnSHY/rgHxfkBCTSwttBPWtwTVeRSWwAZ650l+Q0IHlcUVGAnpK/bsPkLqfvIT188iR/YpMTITyXpKKiVDea3IxEcp7UTImQnmvysZEKO9l6ZgI5b0uHxOhvB9MGEKU85MZixDl/GjKIkQ5P5tziFH9cPICFX04GUd1FZExvNOAHJMdmh9ONiDOwepz9aAyhP3/8XToAELbP0c2I1/3/mt+AAAAAElFTkSuQmCC);
+          width:64px;
+          height:64px;
+          }
+          .cljsvQuestionImg1
+          {
+          background: url(data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAADHElEQVR42u2bPWgUQRiGZ/1BBX8KBTWkUoTDQtNaBCJaBQyCiES0EEQwEjsL0UrBlPGvCIgKkoNgI9iksBF/wE6iwnEWWqjEKCgE1IiY9fm4XVnWO3bvxuW7YeeFd79jdz/43jeTmZ2Z3cCUHIF2AdrwBmgXoI2/BoRhuIqwInX9RxAEP7WLLNQAhG8ljsH9cHnq+jdYhWcx4ot2sUUZcId4NOO+cxhwSbvYogxYMP82/TRmMKAvfZLcJYR9cAgu1RaTAzVYRcv7pAFhjsQ6SZUmBkwRDmmrahMifht6FqwMIG0dYc5kt55uxAn03LA1YA3hLVyvraYD9KPniZUBkQmnCJfhMm1FObEI78GD6AljA2aJmzISH5Kwu9kF8jcQdhk3OsEX6HiTPCEGXCSez0g8QmJVu/oiIAasJB6OuDp1/TO8Be9jwG/tYgsxQLsAbXgDtAvQhjdADnSEMo4PmCadIJ3fU+0iCzUA8TK+T8KeFvfU4RBGvNYutigDHhD3Ztx3DQNOaxdblAHyeJjVF9QwYHv6JLnSakaNO9Nhac0TaJlOGmAzF3hE6NdW1SZklWsLej5ZGUDaZsIH4+ZIMoqe67YGSJN/BSs58rsNFfTUrQyITJARZBzu1FaUEzITHI//+rEBM8QdGYl3SWq59BUtjrjQCc6jYzF5Qgw4RrxpWv8v/4J7SHysXX0RiJ8EZW9g2DSfDk8ifk670EINKDO8AdoFaMMbIIdSd4KlHwb9g5Ddo7DMBC+YxmqSC/gIr6Jl7H8ZINvNrk2GpAX0oeellQGk9RLeaavpECfRM2FlQGRCnuW0boPscPUkF0RslsRk+DxjGqtCLnSCz+EVtDyLT/hF0dIvi8uh1Bsj2gVowxugXYA2vAGlf0XGvyRl/5qcTIUHjBtPgvJIX0sbYDMXGDGNV+3XaitrA9NoGbQ2INoblM3RjdqKOsBgvEVuuzss02EXmn4aw+iZsjIgMkHeuD6uraZNfIW96PkeG2DzwYR8Z3QASgfpQkuQ6fBttMzHJ/wnM6X/aCr+UdrP5rQL0IY3QLsAbZTegD+Xc29QUihz/wAAAABJRU5ErkJggg==);
+          width:64px;
+          height:64px;
+          }
+          .cljsvQuestionImg2
+          {
+          background: url(data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAArUlEQVR42u3YiwnAIAwFwLr/0K0LtGBUUuK9ASTvQPy0u+damNazcr3daQAAAAAQKfEGB6ASwFfJGYDV2w4AAAAAAOwAiJQocQxOLQgAAIDsUgAADMybPUB2ABy/BQAAAAAAQKBE6eewDxEAAAAAABArUeIYnFoQAAAA2aUAABiYN3uA7AA4fgsAAAAAAIBAidLP4d0Ax3+IAAAAAEB28VSAPwWAmyAAAABOBngAfhrQCGSOOEYAAAAASUVORK5CYII=);
+          width:64px;
+          height:64px;
+          }
+        
+          .clvccontrol
+          {
+          background:#4D98CE;
+          }
+          .clvcpopup
+          {
+          background:#4D98CE;
+          }
+          .cljsvNoteText
+          {
+          background:black;
+          }
+          .cljsvChapter
+          {
+          background:#4D98CE;
+          }
+        
+          </style>
+        
+          <script type="text/javascript"><!--//--><![CDATA[//><!--
+        
+          var OptControls, OptEmbedded, OptArgList;
+var FrameWidth, FrameHeight, ViewWidth, ViewHeight, FramesPerSecond;
+var PanX, PanY;
+var PauseLeft, PauseLeftStartTime, PauseLeftStartSeconds;
+var AnimationLeft, AnimationType, AnimationElement, AnimationFrom, AnimationTo, AnimationValue, AnimationFrom2, AnimationTo2, AnimationValue2, IsMouseMove, IsRightClick;
+var ActionList, ActionAreaElement, ActionAreaX1, ActionAreaY1, ActionAreaX2, ActionAreaY2, ActionAreaVisible, ActionWait, ActionRequired, CurrentAction, IsElearning, ActionAreaLocation;
+var VideoFlags;
+var CurrentMouseLeft, CurrentMouseTop;
+var isOldAudio = false;
+var isSafari = false;
+var isFireFox = false;
+var UsePNG = false;
+var BrowserStr = navigator.userAgent.toLowerCase();
+var SilentMp3 = "data:audio/mpeg;base64,/+MYxAAAAANIAAAAAExBTUUzLjk5LjNVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV/+MYxDsAAANIAAAAAFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV";
+var CurrentSoundElement = null;
+var CurrentSoundSrc = SilentMp3;
+var CurrentSoundLoopElement = null;
+var CurrentSoundLoopSrc = SilentMp3;
+var CurrentInterval = null;
+var UseIntroOutro = false;
+var IntroDone = false;
+var CurrentActionTxt = null;
+var CorrectCnt, WrongCnt, TotalCnt, WrongFirst;
+var StartTime = null;
+var EndTime = null;
+var EstimatedTime = null;
+var UseAssistImage = false;
+var CurrentCmd = "";
+var Scale = 1.0;
+var UseGreenRect = false;
+var ReportExit = false;
+var isPaused = false;
+var ActionAreaElementThickness = 4;
+var DoScale = false;
+var DoFit = 0;
+var OrgFrameWidth, OrgFrameHeight;
+var DoSound = true;
+var ChapterList = [];
+var CurrentFrameCount = 0;
+var TotalFrameCount = 0;
+var ChapterState = 0;
+var eLearnReport = { Steps: {}, Obj: null };
+var eLearnStepPoints = 5;
+var eLearnMinPercent = 80;
+var QuestionOn = false;
+var FlowTags = "";
+var OrgFlowTags = "";
+var playFrameWorking = false;
+var DoReportEnd = false;
+var QuestionList = [];
+var finalIsOn = false;
+var ChapterMode = 0;
+var ChapterSecs = 4;
+var previewCallback = null;
+if (BrowserStr.indexOf("safari") >= 0)
+    isSafari = true;
+else if (BrowserStr.indexOf("firefox") >= 0)
+    isFireFox = true;
+else if (BrowserStr.indexOf("msie") >= 0 && document.all && !window.atob)
+    isOldAudio = true;
+var clVideoAssistJS = {
+    ClearAssist: function () {
+        document.getElementById("clAssistCanvas").style.display = "none";
+    },
+    InitializeLoad: function () {
+        var a1;
+        a1 = document.createElement("DIV");
+        a1.id = "clAssistCanvas";
+        a1.setAttribute("style", "position:absolute;display:inline;z-index:9999991;opacity:1.0;display:none;");
+        document.getElementById("uiPlayer").appendChild(a1);
+    },
+    NextStep: function (StepCmd, CurrentText, pX1, pY1, pX2, pY2, viewW, viewH) {
+        while (CurrentText.indexOf("\\r\\n") > 0) CurrentText = CurrentText.replace("\\r\\n", "<br/>");
+        while (CurrentText.indexOf("<br/>", CurrentText.length - 5) !== -1) CurrentText = CurrentText.substr(0, CurrentText.length - 5);
+        var bdBounds = document.getElementById("uiPlayer").getBoundingClientRect();
+        var seBounds = { left: pX1, top: pY1, right: pX2, bottom: pY2 };
+        var noAction = true;
+        var StepText = CurrentText;
+        var NeedArrow = true;
+        var sX = 0; // window.pageXOffset || document.documentElement.scrollLeft;
+        var sY = 0; // window.pageYOffset || document.documentElement.scrollTop;
+        var assistCanvas = document.getElementById("clAssistCanvas");
+        var bLeft = true;
+        var bTop = true;
+        var acx = seBounds.right + sX;
+        if (acx > viewW) acx = sX + 64;
+        var acy = seBounds.bottom + sY;
+        assistCanvas.style.position = "absolute";
+        assistCanvas.style.left = "" + acx + "px";
+        assistCanvas.style.top = "" + acy + "px";
+        var Mascot = "MascotStep";
+        var mWidth = viewW - acx;
+        if (StepCmd === "VideoNote") {
+            Mascot = "MascotInfo";
+            NeedArrow = false;
+            mWidth = viewW / 2;
+        }
+        if (StepCmd === "Keyboard") {
+            Mascot = "MascotInfo";
+            NeedArrow = false;
+            mWidth = viewW / 2;
+        }
+        var redrawIt = 0;
+        do {
+            var showParts = "Mascot"; // "ButtonClose,ButtonHide,Mascot";
+            if (NeedArrow) {
+                var aStr = ",Arrow";
+                if (seBounds.top + sY > bdBounds.top + ((bdBounds.bottom - bdBounds.top) / 2)) {
+                    aStr += "Bottom";
+                    bTop = false;
+                }
+                else {
+                    aStr += "Top";
+                }
+                if (seBounds.left + sX > bdBounds.left + ((bdBounds.right - bdBounds.left) / 2) || redrawIt === 1) {
+                    aStr += "Right";
+                    bLeft = false;
+                    if (redrawIt !== 1) mWidth = acx - sX;
+                }
+                else {
+                    aStr += "Left";
+                }
+                showParts += aStr;
+            }
+            if (redrawIt === 1)
+                redrawIt++;
+            clAssistImage.GenerateImage(showParts, 0, 0, -1, -1, 0, 0, null, Mascot, StepText, "", "", "", "", mWidth);
+            if (assistCanvas.firstChild !== null)
+                assistCanvas.removeChild(assistCanvas.firstChild);
+            assistCanvas.appendChild(clAssistImage.GraphicsDevice);
+            assistCanvas.style.opacity = 0.0; // so that we may calculate the width/height before display
+            assistCanvas.style.display = "block";
+            var y3 = parseInt(assistCanvas.firstChild.getAttribute("data-y3"));
+            if (y3 > 0 && showParts.indexOf("ArrowBottom") >= 0) { acy += y3; assistCanvas.style.top = "" + acy + "px"; }
+            if (!bLeft) {
+                acx = (seBounds.left + sX) - assistCanvas.firstChild.clientWidth;
+                if (acx < 0 && redrawIt === 0) { mWidth += acx; acx = seBounds.right + sX; bLeft = bTop = true; redrawIt = 1; continue; }
+                else if (acx < 0) { acx += (seBounds.right - seBounds.left) / 2; }
+                assistCanvas.style.left = "" + acx + "px";
+            }
+            if (!bTop) {
+                acy = (seBounds.top + sY + y3) - assistCanvas.firstChild.clientHeight;
+                assistCanvas.style.top = "" + acy + "px";
+            }
+            if (StepCmd === "VideoNote" || StepCmd === "Keyboard") {
+                acx = ((seBounds.right - seBounds.left) / 2) - (assistCanvas.firstChild.clientWidth / 2) + sX;
+                assistCanvas.style.left = "" + acx + "px";
+                acy = ((seBounds.bottom - seBounds.top) / 2) - (assistCanvas.firstChild.clientHeight / 2) + sY;
+                acy = (seBounds.bottom - assistCanvas.firstChild.clientHeight - 20);
+                assistCanvas.style.top = "" + acy + "px";
+            }
+            else if (acx + assistCanvas.firstChild.clientWidth > viewW && showParts.indexOf("Left") > 0) {
+                redrawIt = 1;
+                mWidth = seBounds.left;
+                if (seBounds.left < viewW / 2) {
+                    acx += ((seBounds.right - seBounds.left) / 2) + sX;
+                    assistCanvas.style.left = "" + acx + "px";
+                    mWidth = seBounds.left + ((seBounds.right - seBounds.left) / 2);
+                }
+            }
+        } while (redrawIt === 1);
+        assistCanvas.style.opacity = 1.0;
+    }
+};
+function getURLParameter(name) {
+    name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+    var regexS = "[\\?&]" + name + "=([^&#]*)";
+    var regex = new RegExp(regexS);
+    var results = regex.exec(self.location.href);
+    if (results === null)
+        return "";
+    else
+        return unescape(results[1]);
+}
+function loadActions() {
+    var aTxt = document.getElementById("ActionsTxt").innerHTML;
+    ActionList = aTxt.split("££");
+}
+function jsvFindParentObject(nam) {
+    var maxlevels = 7;
+    var p = window;
+    try {
+        while ((p = p.parent) !== null && p !== window) {
+            if (--maxlevels === 0) break;
+            var o;
+            if (typeof ((o = p[nam])) !== "undefined") {
+                return (o);
+            }
+            else if (typeof ((o = p["findParentObject"])) !== "undefined") {
+                if ((o = o(nam)) !== null) {
+                    return (o);
+                }
+            }
+        }
+    }
+    catch (e) {
+        var emsg = e.message;
+    }
+    return (null);
+}
+function correctSoundPause(spi) {
+    if ((VideoFlags & 2) && !IsElearning && !ActionRequired) {
+        spi = spi - 2;
+        if (spi < 0) {
+            spi = 0;
+        }
+    }
+    return (spi);
+}
+function playerCalcFrames(ca, isInitial) { // molnew
+    if (ca > ActionList.length)
+        ca = ActionList.length;
+    var i, ActionStr, ActionPars, ActionParList, FrameCount;
+    FrameCount = 0;
+    for (i = 0; i < ca; i++) {
+        j = ActionList[i].indexOf("=");
+        ActionStr = (j > 0) ? ActionList[i].substr(0, j) : "";
+        ActionPars = (j > 0) ? ActionList[i].substr(j + 1) : "";
+        ActionParList = ActionPars.split(",");
+        if (ActionStr === "FrameWidth") {
+            if (isInitial)
+                FrameWidth = parseInt(ActionPars);
+        }
+        else if (ActionStr === "FrameHeight") {
+            if (isInitial)
+                FrameHeight = parseInt(ActionPars);
+        }
+        else if (ActionStr === "ViewWidth") {
+            if (isInitial)
+                ViewWidth = parseInt(ActionPars);
+        }
+        else if (ActionStr === "ViewHeight") {
+            if (isInitial)
+                ViewHeight = parseInt(ActionPars);
+        }
+        else if (ActionStr === "FramesPerSecond") {
+            if (isInitial)
+                FramesPerSecond = parseInt(ActionPars);
+        }
+        else if (ActionStr === "UsePNG") {
+            if (isInitial)
+                UsePNG = true;
+        }
+        else if (ActionStr === "Image")
+            FrameCount++;
+        else if (UseIntroOutro && ActionStr === "Intro") // molnew
+            FrameCount += 3 * FramesPerSecond;
+        else if (ActionStr === "Chapter" && ActionParList[0] === "0") {
+            FrameCount += ChapterSecs * FramesPerSecond;
+            ChapterList.push({ idx: i, title: ActionParList.join(",").substring(2) });
+        }
+        else if (ActionStr === "SoundPause") {
+            if (!(VideoFlags & 1)) {
+                FrameCount += correctSoundPause(parseInt(ActionParList[0]) + 1) * FramesPerSecond;
+            }
+        }
+        else if (ActionStr === "ActionWait" && ActionParList[0] === "1") {
+            TotalCnt++;
+            FrameCount += FramesPerSecond;
+        }
+    }
+    return (FrameCount);
+}
+function playClickLearnRecording(ArgList, showNow) {
+    //try {
+    //    window.addEventListener("unload", function (e) {
+    //        playerExit();
+    //    });
+    //} catch (e) {
+    //}
+    try {
+        if (typeof (CLJSVArgList) !== "undefined") {
+            if (typeof (CLJSVArgList) === "string") {
+                ArgList = CLJSVArgList;
+            }
+            else if (typeof (CLJSVArgList) === "function") {
+                ArgList = CLJSVArgList(ArgList);
+            }
+        }
+        var urlPars = getURLParameter("jsvpars");
+        if (urlPars !== null && urlPars !== "") {
+            ArgList = urlPars;
+        }
+        var al = jsvFindParentObject("CLJSVGetArgList");
+        if (al !== null) {
+            ArgList = al(ArgList);
+        }
+        al = jsvFindParentObject("CLJSVArgList");
+        if (al !== null) {
+            ArgList = al(ArgList);
+        }
+    } catch (e1) {
+        var emsg1 = e1.message;
+    }
+    try {
+        if (typeof (window.frameElement) !== "undefined" && window.frameElement !== null) {
+            var jp = window.frameElement.getAttribute("data-jsvpars");
+            if (jp !== null && jp !== "") {
+                ArgList = jp;
+            }
+        }
+    } catch (e2) {
+        var emsg2 = e2.message;
+        alert(e2msg);
+    }
+    OptEmbedded = false;
+    var jsvEmbedded = null;
+    try {
+        jsvEmbedded = window.parent["jsvEmbedded"];
+        if (typeof (jsvEmbedded) !== "undefined" && jsvEmbedded !== null) {
+            window.parent["jsvEmbedded"] = null;
+            OptEmbedded = true;
+            ArgList = jsvEmbedded;
+        }
+    } catch (e7) {
+        var e7msg = e7.message;
+    }
+    var jsvp = document.getElementById("cljsv");
+    if (jsvp !== null && showNow === true) {
+        jsvp.style.display = 'block';
+    }
+    OptControls = 0;
+    ActionRequired = false;
+    IsElearning = false;
+    VideoFlags = 0;
+    ChapterSecs = 4;
+    var i;
+    var s = ArgList.toLowerCase();
+    OptArgList = ArgList;
+    if (s.indexOf("interactive") >= 0)
+        ActionRequired = true;
+    if (s.indexOf("elearn") >= 0) {
+        IsElearning = true;
+        ActionRequired = true;
+    }
+    if ((i = s.indexOf("videoflags=")) >= 0) {
+        VideoFlags = parseInt(s.substr(i + 11));
+    }
+    if (s.indexOf("greenrect") >= 0) {
+        UseGreenRect = true;
+    }
+    if ((i = s.indexOf("chaptermode=")) >= 0) {
+        ChapterMode = parseInt(s.substr(i + 12));
+        if (ChapterMode === 1)
+            ChapterSecs = 2;
+        else if (ChapterMode === 2)
+            ChapterSecs = 0;
+    }
+    if ((i = s.indexOf("controls=")) >= 0) {
+        OptControls = parseInt(s.substr(i + 9));
+        if (OptControls > 0) {
+            var vcc = document.getElementById("clvc_control");
+            if (vcc !== null) {
+                vcc.style.display = 'block';
+                if (OptControls === 2) {
+                    vcc.style.height = "4px";
+                }
+                if (IsElearning) {
+                    if ((vcc = document.getElementById("clvc_timeline")) !== null)
+                        vcc.style.display = "none";
+                    if ((vcc = document.getElementById("clvc_play")) !== null)
+                        vcc.style.display = "none";
+                    if ((vcc = document.getElementById("clvc_chapters")) !== null)
+                        vcc.style.display = "none";
+                }
+            }
+        }
+    }
+    loadActions();
+    FramesPerSecond = 24;
+    if (s.indexOf("startbutton") >= 0) // intro/outro // molnew
+    {
+        UseIntroOutro = true;
+    }
+    TotalCnt = 0;
+    TotalFrameCount = playerCalcFrames(ActionList.length, true);
+
+    var uiPlayer = document.getElementById("uiPlayer");
+    uiPlayer.style.width = "" + ViewWidth + "px";
+    uiPlayer.style.height = "" + ViewHeight + "px";
+    var cle = document.getElementById("clvc_chapters");
+    if (cle !== null && ChapterList.length > 0) {
+        for (i = 0; i < ChapterList.length; i++) {
+            var ce = document.createElement("div");
+            ce.id = "clvcchapter" + i;
+            ce.className = "clvcchapteritem";
+            ce.textContent = ChapterList[i].title;
+            ce.onclick = playerSelectChapter;
+            cle.appendChild(ce);
+        }
+    }
+    if (cle === null || ChapterList.length <= 0 || IsElearning) {
+        cle = document.getElementById("clvc_next");
+        if (cle !== null) {
+            cle.style.display = 'none';
+        }
+    }
+
+    OrgFrameWidth = FrameWidth; OrgFrameHeight = FrameHeight;
+    EstimatedTime = TotalFrameCount / FramesPerSecond;
+
+    try {
+        previewCallback = jsvFindParentObject("CLJSVpreviewCallback");
+        if (previewCallback !== null) previewCallback("ready");
+    } catch (e7) {
+        var e7msg = e7.message;
+    }
+
+    playerSetCurrentAction(0);
+
+    if (s.indexOf("autofit") >= 0) // autofit
+    {
+        DoFit = 2;
+    }
+    else if (s.indexOf("fit") >= 0) // fit
+    {
+        DoFit = 1;
+    }
+    if (s.indexOf("scale") >= 0) {
+        DoScale = true;
+    }
+    if (typeof (clAssistImageTemplate) !== 'undefined') {
+        UseAssistImage = true;
+        clVideoAssistJS.InitializeLoad();
+    }
+    if (isSafari) // iPhone!!!
+    {
+        //ViewWidth = 480;
+        //ViewHeight = 320;
+    }
+
+    playerResized();
+
+    var uiCursor = document.getElementById("uiCursor");
+    if (ActionRequired && uiCursor !== null)
+        uiCursor.style.display = 'none';
+    CurrentMouseLeft = 0;
+    CurrentMouseTop = 0;
+
+    PanX = 0;
+    PanY = 0;
+
+    ActionAreaElement = document.getElementById("uiActionArea");
+    if (UseGreenRect) {
+        ActionAreaElement.style.borderColor = "#00c400";
+    }
+    ActionAreaElement.style.display = "none";
+    try {
+        ActionAreaElementThickness = parseInt(ActionAreaElement.getAttribute("bw"));
+    } catch (e) {
+        var emsg = e.message;
+    }
+    ActionAreaVisible = false;
+    ActionWait = 0;
+
+    CurrentSoundElement = null;
+    CurrentSoundLoopElement = null;
+
+    CorrectCnt = 0;
+    WrongCnt = 0;
+    WrongFirst = true;
+
+    var iaction = "Init";
+    var iv = 0;
+    if (ActionRequired) {
+        iv = IsElearning ? 2 : 1;
+    }
+    var locationStr = playerReportProgress({ action: "Init", intValue1: iv, txt: s });
+    if (locationStr !== null && locationStr !== "") {
+        try {
+            var locationPars = locationStr.split("|");
+            CorrectCnt = parseInt(locationPars[3]);
+            WrongCnt = parseInt(locationPars[4]);
+            if (locationPars.length >= 6) {
+                eLearnReport = JSON.parse(locationPars[5]);
+            }
+        }
+        catch (e1) {
+            var e1msg = e1.message;
+        }
+    }
+    playFromLocation(locationStr);
+    if (locationStr !== null && locationStr !== "" && StartTime === null) StartTime = new Date();
+
+    CurrentInterval = setInterval(playFrame, 1000 / FramesPerSecond);
+}
+function playerSetIntroTitle() {
+    if (!IntroDone) {
+        IntroDone = true;
+        ActionAreaX1 = ActionAreaX2 = ActionAreaY1 = ActionAreaY2 = 0;
+        setIntroTitle("");
+    }
+}
+function playerSetCurrentAction(ca) {
+    var i;
+    setIntroTitle("");
+    doAnimation(1);
+    if (ChapterState > 0) {
+        doChapter(["2"], "");
+        doAnimation(1);
+        ChapterState = 0;
+    }
+    if (!UseIntroOutro || IntroDone) {
+        if (ActionRequired && ActionWait === 1) {
+            ActionWait = 0;
+        }
+    }
+    PauseLeft = 0;
+    PauseLeftStartTime = null;
+    CurrentFrameCount = playerCalcFrames(ca, false);
+    CurrentAction = ca;
+}
+
+function FindActionWaitLocation() {
+    var i = CurrentAction - 1;
+    if (i < 0)
+        i = 0;
+    for (; i < ActionList.length; i++) {
+        j = ActionList[i].indexOf("=");
+        ActionStr = (j > 0) ? ActionList[i].substr(0, j) : "";
+        ActionPars = (j > 0) ? ActionList[i].substr(j + 1) : "";
+        if (ActionStr === "ActionWait") {
+            return (i);
+        }
+        else if (ActionStr === "ActionInfo") {
+            break;
+        }
+        else if (ActionStr === "ActionFormattedText") {
+            CurrentActionTxt = ActionPars.replace("&lt;b&gt;", "").replace("&lt;/b&gt;", "").replace("&lt;br/&gt;", "\n");
+        }
+    }
+    return (-1);
+}
+
+function playFromEditorStep(locationId) {
+    var i;
+    var locationStr = null;
+    for (i = 0; i < ActionList.length; i++) {
+        if (ActionList[i].indexOf("ActionInfo=") !== 0)
+            continue;
+        if (ActionList[i].indexOf("id=\"" + locationId + "\"") > 0) {
+            locationStr = "" + i;
+            break;
+        }
+    }
+    if (locationStr !== null) {
+        playerActionCorrect();
+        playFromLocation(locationStr);
+        if (CurrentInterval === null) {
+            CurrentInterval = setInterval(playFrame, 1000 / FramesPerSecond);
+        }
+    }
+}
+function playFromLocation(locationStr) { // CurrentAction|Text|TotalCnt|CorrectCnt|WrongCnt
+    if (locationStr === null || locationStr === "" || typeof (locationStr) === "undefined")
+        return;
+    toggleFinal(false);
+    var locationidx = parseInt(locationStr);
+    if (isNaN(locationidx))
+        locationidx = 0;
+    var i = locationidx;
+    var k = -1;
+    var j;
+    hideActionArea();
+    while (i > 0) {
+        j = ActionList[i].indexOf("=");
+        ActionStr = (j > 0) ? ActionList[i].substr(0, j) : "";
+        ActionPars = (j > 0) ? ActionList[i].substr(j + 1) : "";
+        ActionParList = ActionPars.split(",");
+        if (ActionStr === "Image") {
+            var no, x, y, w, h;
+            no = parseInt(ActionParList[0]);
+            x = parseInt(ActionParList[1]);
+            y = parseInt(ActionParList[2]);
+            w = parseInt(ActionParList[3]);
+            h = parseInt(ActionParList[4]);
+            if (x === 0 && y === 0 && w === OrgFrameWidth && h === OrgFrameHeight) {
+                if (ActionAreaVisible && ActionWait === 1) {
+                    ActionWait = 0;
+                }
+                break;
+            }
+        }
+        if (k === -1 && (ActionStr === "ActionInfo" || (ActionStr === "Chapter" && ActionParList[0] === "0")))
+            k = i;
+        i--;
+    }
+    if (k === -1)
+        k = locationidx;
+    while (i < k) {
+        j = ActionList[i].indexOf("=");
+        ActionStr = (j > 0) ? ActionList[i].substr(0, j) : "";
+        ActionPars = (j > 0) ? ActionList[i].substr(j + 1) : "";
+        ActionParList = ActionPars.split(",");
+        if (ActionStr === "Image")
+            addImage(ActionParList);
+        i++;
+    }
+    playerSetCurrentAction(k);
+}
+function stopClickLearnRecording(hideNow) {
+    if (CurrentInterval !== null) {
+        clearInterval(CurrentInterval);
+        stopAllSound();
+        CurrentInterval = null;
+        var jsvp = document.getElementById("cljsv");
+        if (jsvp !== null && hideNow === true) {
+            jsvp.style.display = 'none';
+        }
+    }
+}
+function gotAnswer(ev) {
+    var e = ev || window.event;
+    if (typeof (ev.stopPropagation) !== "undefined") ev.stopPropagation();
+    else if (typeof (ev.cancelBubble) !== "undefined") ev.cancelBubble = true;
+    var qtype = e.srcElement.getAttribute("qtype");
+    var tags = e.srcElement.getAttribute("tags");
+    if (tags !== null)
+        FlowTags += " " + tags + " ";
+    if (qtype !== "0") {
+        var elm = document.getElementById("clvcquestion_options");
+        var opte = elm.getElementsByTagName("INPUT");
+        if (opte !== null) {
+            var i;
+            for (i = 0; i < opte.length; i++) {
+                if (opte[i].checked) {
+                    tags = opte[i].getAttribute("tags");
+                    if (tags !== null)
+                        FlowTags += " " + tags + " ";
+                }
+            }
+        }
+    }
+    playerReportProgress({ action: "Answer", intValue1: CurrentAction, txtValue3: FlowTags });
+    document.getElementById("uiQuestion").style.display = "none";
+    QuestionOn = false;
+}
+function playVideo(videoLink) {
+    var e = document.getElementById("uiEmbeddedVideo");
+    if (e !== null) {
+        isPaused = true;
+        window["jsvEmbedded"] = OptArgList.replace("startbutton", "");
+        e.innerHTML = '<iframe src="' + videoLink + '" style="border:none;width:100%;height:100%;" allowfullscreen="true"></iframe>';
+        e.style.display = "block";
+        setTimeout(checkVideo, 3000);
+    }
+}
+function checkVideo() {
+    if (window["jsvEmbedded"] !== null) {
+        continueVideo();
+    }
+}
+function continueVideo() {
+    var e = document.getElementById("uiEmbeddedVideo");
+    if (e !== null) {
+        isPaused = false;
+        window["jsvEmbedded"] = null;
+        e.innerHTML = '';
+        e.style.display = "none";
+    }
+}
+function showQuestion(Args) {
+    var e = document.getElementById("uiQuestion");
+    if (e !== null) {
+        try {
+            if (e.innerHTML !== null && e.innerHTML !== "") {
+                QuestionOn = true;
+                // Yes,No$$#yes,#no
+                var i, elm, txt, tag;
+                txt = Args;
+                i = 0;
+                while (++i < 10 && txt.indexOf("&lt;") >= 0)
+                    txt = txt.replace("&lt;", "<").replace("&gt;", ">");
+                var atl = txt.split("$CL$");
+                var qtype = atl.length > 0 ? atl[0] : "0";
+                txt = atl.length > 2 ? atl[2] : "";
+                var optList = txt.split(",");
+                var tagList = atl.length > 3 ? atl[3].split(",") : [];
+                // question type
+                elm = document.getElementById("clvcquestion_options");
+                if (elm !== null) {
+                    elm.innerHTML = "";
+                    if (qtype !== "0") {
+                        for (i = 0; i < optList.length - 1; i++) {
+                            var optdiv = document.createElement("DIV");
+                            var optspan = document.createElement("SPAN");
+                            optspan.textContent = optList[i];
+                            var opt = document.createElement("INPUT");
+                            opt.name = "opt";
+                            opt.type = (qtype === "1") ? "RADIO" : "CHECKBOX";
+                            tag = i < tagList.length ? tagList[i] : "";
+                            opt.setAttribute("tags", tag);
+                            optdiv.appendChild(opt);
+                            optdiv.appendChild(optspan);
+                            elm.appendChild(optdiv);
+                        }
+                    }
+                    elm = document.getElementById("clvcquestion_img");
+                    if (elm !== null) {
+                        elm.className = "cljsvQuestionImg" + qtype;
+                    }
+                }
+                // question text
+                elm = document.getElementById("clvcquestion_text");
+                if (elm !== null) {
+                    txt = atl.length > 1 ? atl[1] : "";
+                    elm.innerHTML = txt;
+                }
+                elm = document.getElementById("clvcquestion_answers");
+                // Create buttons
+                if (elm !== null) {
+                    elm.innerHTML = "";
+                    i = qtype === "0" ? 0 : optList.length - 1;
+                    for (; i < optList.length; i++) {
+                        txt = optList[i];
+                        var btn = document.createElement("BUTTON");
+                        btn.textContent = txt;
+                        tag = i < tagList.length ? tagList[i] : "";
+                        btn.setAttribute("tags", tag);
+                        btn.setAttribute("qtype", atl[0]);
+                        btn.onclick = gotAnswer;
+                        elm.appendChild(btn);
+                    }
+                }
+                e.style.display = "block";
+            }
+        } catch (e) {
+            var emsg = e.message;
+        }
+    }
+}
+function toggleFinal(isOn) {
+    var s = "uiFinal";
+    if (IsElearning)
+        s += "_elearn";
+    else if (ActionRequired)
+        s += "_interactive";
+    var e = document.getElementById(s);
+    if (e !== null) {
+        try {
+            if (e.innerHTML !== null && e.innerHTML !== "") {
+                if (isOn) {
+                    prepareFinal(e);
+                }
+                e.style.display = isOn ? "block" : "none";
+                finalIsOn = isOn;
+                if (isOn) {
+                    return (true);
+                }
+            }
+        } catch (e) {
+            var emsg = e.message;
+        }
+    }
+    return (false);
+}
+function toggleComment(isOn) {
+    var ce = document.getElementById("clvc_comments");
+    if (ce !== null) {
+        if (ce.innerHTML === null || ce.innerHTML === "")
+            isOn = false;
+        ce.style.display = 'none';
+        var cicon = document.getElementById("clvc_input");
+        if (cicon !== null)
+            cicon.style.display = isOn ? "inline-block" : "none";
+    }
+}
+function reportComment(eId) {
+    var e = document.getElementById(eId);
+    if (e !== null) {
+        var commentText = e.innerHTML || e.innerText;
+        try {
+            e.innerHTML = "";
+        } catch (e1) {
+            try {
+                e.innerText = "";
+            } catch (e2) {
+                var emsg = e2.message;
+            }
+        }
+        reportEx("Comment", commentText, CurrentAction);
+        playerDoControl(null, 'i');
+        toggleComment(false);
+    }
+}
+function reportFinal(eId) {
+    var pElement = document.getElementById(eId);
+    if (eId === null)
+        return (false);
+    var Obj = {};
+    Obj["action"] = "Final"; // required!
+    Obj["txt"] = ""; // required!
+    var ce = pElement.getElementsByTagName("INPUT");
+    var e, Data;
+    if (ce !== null) {
+        for (i = 0; i < ce.length; i++) {
+            e = ce[i];
+            try {
+                if (e.type === "radio" && !e.checked)
+                    continue;
+                Data = null;
+                if (e.type === "checkbox")
+                    Data = (e.checked) ? "1" : "0";
+                else if (e.value !== null && "" + e.value !== "")
+                    Data = "" + e.value;
+                if (Data !== null) {
+                    Obj[e.name] = Data;
+                }
+            } catch (e1) {
+                var emsg = e1.message;
+            }
+        }
+    }
+    ce = pElement.getElementsByTagName("TEXTAREA");
+    if (ce !== null) {
+        for (i = 0; i < ce.length; i++) {
+            e = ce[i];
+            Data = e.innerHTML || e.innerText || e.value;
+            if (Data !== null && Data !== "")
+                Obj[e.name] = Data;
+        }
+    }
+    toggleFinal(false);
+    //alert(JSON.stringify(Obj));
+    playerReportProgress(Obj);
+    return (true);
+}
+function reportEx(Action, CustomField, Location) {
+    CurTime = new Date();
+    if (StartTime === null) StartTime = new Date();
+    var TotalTime = CurTime.getTime() - StartTime.getTime();
+    return (playerReportProgress({ action: Action, location: Location, txt: CurrentActionTxt, steps: TotalCnt, correct: (CorrectCnt - WrongCnt), wrong: WrongCnt, start: StartTime, end: CurTime, duration: TotalTime, estimated: EstimatedTime, customfield: CustomField }));
+}
+function toHHMMSS(sec_num) {
+    sec_num = Math.round(sec_num);
+    var hours = Math.floor(sec_num / 3600);
+    var minutes = Math.floor((sec_num - (hours * 3600)) / 60);
+    var seconds = sec_num - (hours * 3600) - (minutes * 60);
+    if (hours < 10) { hours = "0" + hours; }
+    if (minutes < 10) { minutes = "0" + minutes; }
+    if (seconds < 10) { seconds = "0" + seconds; }
+    var rStr = "";
+    if (hours > 0)
+        rStr += "" + hours + ":";
+    rStr += "" + minutes + ":" + seconds;
+    return (rStr);
+}
+function playFrame() {
+    if (playFrameWorking)
+        return;
+    playFrameWorking = true;
+    try {
+        var ca1;
+        var ca2;
+        do {
+            ca1 = CurrentAction;
+            ca2 = CurrentFrameCount;
+            playFrameNow();
+        } while (CurrentAction > ca1 && CurrentFrameCount === ca2);
+    } catch (e) {
+        var emsg = e.message;
+    }
+    playFrameWorking = false;
+}
+function playFrameNow() {
+    if (false) { // debug
+        var dbgStr = "";
+        dbgStr += "await=" + ActionWait;
+        dbgStr += ",aleft=" + AnimationLeft;
+        dbgStr += ",pleft=" + PauseLeft;
+        dbgStr += ",etime=" + EstimatedTime;
+        dbgStr += ",caction=" + CurrentAction;
+        document.getElementById("clvc_info").textContent = dbgStr;
+    }
+    else {
+        var ct1 = CurrentFrameCount / FramesPerSecond;
+        if (EstimatedTime < ct1)
+            EstimatedTime = ct1;
+        var tim1 = toHHMMSS(ct1);
+        var tim2 = toHHMMSS(EstimatedTime);
+        var iStr = tim1;
+        if (iStr.length > 0)
+            iStr += " / ";
+        iStr += tim2;
+        var clvci = document.getElementById("clvc_info");
+        if (clvci !== null && clvci.innerHTML !== iStr)
+            clvci.innerHTML = iStr;
+    }
+    if (ActionWait === 1 || isPaused || QuestionOn) {
+        ;
+    }
+    else if (AnimationLeft > 0) {
+        doAnimation(0);
+        AnimationLeft--;
+        CurrentFrameCount++;
+        if (AnimationLeft === 0) {
+            if (ChapterState === 3)
+                ChapterState = 0;
+        }
+    }
+    else if (PauseLeft > 0) {
+        PauseLeft--;
+        CurrentFrameCount++;
+        if (PauseLeftStartTime !== null) {
+            var plTime = new Date();
+            var dif = plTime.getTime() - PauseLeftStartTime.getTime();
+            var Seconds_from_T1_to_T2 = dif / 1000;
+            var Seconds_Between_Dates = Math.abs(Seconds_from_T1_to_T2);
+            if (Seconds_Between_Dates > PauseLeftStartSeconds) {
+                CurrentFrameCount += PauseLeft;
+                PauseLeft = 0;
+            }
+        }
+        if (PauseLeft === 0) {
+            if (UseIntroOutro && !IntroDone) {
+                playerSetIntroTitle();
+            }
+            if (ActionWait !== 1 && ActionList[CurrentAction] !== "ActionWait=1") {
+                setNote("");
+            }
+        }
+    }
+    else if ((i = CurrentAction) < ActionList.length) {
+        var z, uiFrames, img;
+        CurrentAction++;
+        var tle = document.getElementById("clvc_tlp1");
+        if (tle !== null) {
+            tle.style.width = "" + (CurrentAction / ActionList.length) * 100 + "%";
+        }
+        j = ActionList[i].indexOf("=");
+        ActionStr = (j > 0) ? ActionList[i].substr(0, j) : "";
+        ActionPars = (j > 0) ? ActionList[i].substr(j + 1) : "";
+        ActionParList = ActionPars.split(",");
+        if (ActionStr === "ActionText") {
+            if (!(VideoFlags & 1)) {
+                setNote(ActionPars);
+            }
+        }
+        else if (ActionStr === "ActionFormattedText") {
+            CurrentActionTxt = ActionPars.replace("&lt;b&gt;", "").replace("&lt;/b&gt;", "").replace("&lt;br/&gt;", "\n");
+            if (UseAssistImage && !IsElearning) {
+                z = 0;
+                CurrentActionTxt = ActionPars;
+                while (++z < 10 && CurrentActionTxt.indexOf("&lt;") >= 0)
+                    CurrentActionTxt = CurrentActionTxt.replace("&lt;", "<").replace("&gt;", ">");
+                if (CurrentCmd === "Keyboard")
+                    clVideoAssistJS.NextStep(CurrentCmd, CurrentActionTxt, 0, 0, ViewWidth, ViewHeight, ViewWidth, ViewHeight);
+                else
+                    clVideoAssistJS.NextStep(CurrentCmd, CurrentActionTxt, ActionAreaX1 + PanX, ActionAreaY1 + PanY, ActionAreaX2 + PanX, ActionAreaY2 + PanY, ViewWidth, ViewHeight);
+            }
+            playerReportProgress({ action: "Step", intValue1: CurrentAction, txtValue3: CurrentActionTxt });
+            if (ActionRequired) {
+                WrongFirst = true;
+                toggleComment(true);
+                reportEx("Wait", null, CurrentAction);
+            }
+        }
+        else if (ActionStr === "ResetPan") {
+            HandlePan(0, 0, 1, 1);
+        }
+        else if (ActionStr === "Note") {
+            playerReportProgress({ action: "Note", intValue1: CurrentAction, txtValue3: ActionPars });
+            if (!(VideoFlags & 1)) {
+                setNote(ActionPars);
+            }
+            if (UseAssistImage && !IsElearning) {
+                clVideoAssistJS.NextStep("VideoNote", ActionPars, 0, 0, ViewWidth, ViewHeight, ViewWidth, ViewHeight);
+            }
+        }
+        else if (ActionStr === "Question") {
+            playerReportProgress({ action: "Question", intValue1: CurrentAction, txtValue3: ActionPars });
+            showQuestion(ActionPars);
+        }
+        else if (ActionStr === "RecStart") {
+            var rsPars = ActionPars.split("|");
+            playVideo(rsPars[1]);
+        }
+        else if (ActionStr.indexOf("StartFlowTags") === 0) {
+            var isNot = ActionPars[0] === "!" ? 1 : 0;
+            var idx = FlowTags.indexOf(" " + ActionPars.substring(isNot) + " ");
+            if ((!isNot && idx < 0) || (isNot && idx >= 0)) {
+                var endft = "EndFlowTags" + ActionStr.substring(13);
+                var KeepGoing = false;
+                do {
+                    while (ActionList[i].indexOf(endft) !== 0) {
+                        i++;
+                    }
+                    var k = i;
+                    KeepGoing = false;
+                    while (++i < ActionList.length) {
+                        if (ActionList[i].indexOf("StartFlowTag") === 0) {
+                            j = ActionList[i].indexOf("=");
+                            ActionStr = (j > 0) ? ActionList[i].substr(0, j) : "";
+                            ActionPars = (j > 0) ? ActionList[i].substr(j + 1) : "";
+                            ActionParList = ActionPars.split(",");
+                            isNot = ActionPars[0] === "!" ? 1 : 0;
+                            idx = FlowTags.indexOf(" " + ActionPars.substring(isNot) + " ");
+                            if ((!isNot && idx < 0) || (isNot && idx >= 0)) {
+                                endft = "EndFlowTags" + ActionStr.substring(13);
+                                KeepGoing = true;
+                            }
+                            break;
+                        }
+                        else if (ActionList[i].indexOf("Image=") === 0) {
+                            ;
+                        }
+                        else if (ActionList[i].indexOf("MouseLeftClick=") === 0) {
+                            ;
+                        }
+                        else if (ActionList[i].indexOf("MouseRightClick=") === 0) {
+                            ;
+                        }
+                        else if (ActionList[i].indexOf("MouseDoubleClick=") === 0) {
+                            ;
+                        }
+                        else if (ActionList[i].indexOf("MouseMove=") === 0) {
+                            ;
+                        }
+                        else if (ActionList[i].indexOf("SoundPause=") === 0) {
+                            ;
+                        }
+                        else if (ActionList[i].indexOf("Grouping=") === 0) {
+                            ;
+                        }
+                        else {
+                            break;
+                        }
+                    }
+                    if (!KeepGoing) {
+                        i = k;
+                    }
+                } while (KeepGoing);
+                for (k = CurrentAction; k < i; k++) {
+                    if (ActionList[k].indexOf("Image=") === 0) {
+                        CurrentFrameCount++;
+                        if (StartTime === null) StartTime = new Date();
+                        addImage(ActionParList);
+                    }
+                    else if (ActionList[k].indexOf("SoundPause=") === 0) {
+                        if (!(VideoFlags & 1)) {
+                            CurrentFrameCount += correctSoundPause(parseInt(ActionList[k].substring(11)) + 1) * FramesPerSecond;
+                        }
+                    }
+                }
+                CurrentAction = i;
+            }
+        }
+        else if (ActionStr === "Name") {
+            if (UseIntroOutro) {
+                setIntroTitle(ActionPars);
+            }
+        }
+        else if (ActionStr === "Description") {
+            if (UseIntroOutro) {
+                setIntroDescription(ActionPars);
+            }
+        }
+        else if (ActionStr === "Speaker") {
+            playerReportProgress({ action: "Speaker", intValue1: CurrentAction, txtValue3: ActionPars });
+            if (!(VideoFlags & 1)) {
+                setNote(ActionPars);
+            }
+        }
+        else if (ActionStr === "Image") {
+            CurrentFrameCount++;
+            if (StartTime === null) StartTime = new Date();
+            addImage(ActionParList);
+        }
+        else if (ActionStr === "SoundPause") {
+            if (!(VideoFlags & 1)) {
+                PauseLeftStartSeconds = correctSoundPause(parseInt(ActionPars) + 1);
+                if ((VideoFlags & 2) && !IsElearning && !ActionRequired && PauseLeftStartSeconds > 0) {
+                    PauseLeftStartSeconds--;
+                }
+                PauseLeft = PauseLeftStartSeconds * FramesPerSecond;
+                PauseLeftStartTime = new Date();
+            }
+        }
+        else if (ActionStr === "Sound") {
+            if (!(VideoFlags & 1)) {
+                playSound(ActionParList);
+            }
+        }
+        else if (ActionStr === "CustomSound")
+            playSoundLoop(ActionParList);
+        else if (ActionStr === "Chapter")
+            doChapter(ActionParList, ActionList[i + 1]);
+        else if (ActionStr === "ActionInfo") {
+            z = ActionPars.indexOf("cmd=");
+            if (z > 0) {
+                var zarray = ActionPars.substr(z).split('"');
+                CurrentCmd = zarray[1];
+            }
+            IsMouseMove = false;
+            IsRightClick = false;
+            z = ActionPars.indexOf("mouse=\"Move\"");
+            if (z > 0) {
+                IsMouseMove = true;
+            }
+            else {
+                z = ActionPars.indexOf("mouse=\"Right\"");
+                if (z > 0) {
+                    IsRightClick = true;
+                }
+            }
+        }
+        else if (ActionStr === "ActionArea") {
+            WrongFirst = true;
+            playerSetIntroTitle();
+            ActionAreaLocation = CurrentAction;
+            ActionAreaX1 = parseInt(ActionParList[0]);
+            ActionAreaY1 = parseInt(ActionParList[1]);
+            ActionAreaX2 = parseInt(ActionParList[2]);
+            ActionAreaY2 = parseInt(ActionParList[3]);
+            if (Scale !== 1.0) { ActionAreaX1 = scaleValue(ActionAreaX1, 2); ActionAreaX2 = scaleValue(ActionAreaX2, 2); ActionAreaY1 = scaleValue(ActionAreaY1, 2); ActionAreaY2 = scaleValue(ActionAreaY2, 2); }
+            var bw = ActionAreaElementThickness;
+            ActionAreaElement.style.left = "" + (ActionAreaX1 - bw) + "px";
+            ActionAreaElement.style.top = "" + (ActionAreaY1 - bw) + "px";
+            ActionAreaElement.style.width = "" + ((ActionAreaX2 - ActionAreaX1)) + "px";
+            ActionAreaElement.style.height = "" + ((ActionAreaY2 - ActionAreaY1)) + "px";
+            if (!IsElearning && ActionRequired && !UseGreenRect) {
+                ActionAreaElement.style.display = "block";
+                ActionAreaVisible = true;
+            }
+            HandlePan(ActionAreaX1, ActionAreaY1, ActionAreaX2, ActionAreaY2);
+        }
+        else if (ActionStr === "Bookmark") {
+            //var bX1 = parseInt(ActionParList[1]);
+            //var bY1 = parseInt(ActionParList[2]);
+            //var bX2 = parseInt(ActionParList[3]);
+            //var bY2 = parseInt(ActionParList[4]);
+            //if (Scale !== 1.0) { bX1 = scaleValue(bX1, 2); bY1 = scaleValue(bY1, 2); bX2 = scaleValue(bX2, 2); bY2 = scaleValue(bY2, 2); }
+            //HandlePan(bX1, bY1, bX2, bY2);
+            HandlePan(0, 0, 1, 1);
+            addImage(ActionParList);
+
+        }
+        else if (ActionStr === "ActionWait") {
+            if (ActionRequired) {
+                ActionWait = (ActionWait === -1) ? 0 : 1;
+            }
+        }
+        else if (ActionStr.lastIndexOf("Mouse") === 0) {
+            MouseMove(parseInt(ActionParList[0]), parseInt(ActionParList[1]));
+            if (!ActionRequired) {
+                hideActionArea();
+            }
+        }
+        else if (ActionStr === "Intro") {
+            if (UseIntroOutro === true) {
+                FlowTags = OrgFlowTags;
+                setNote("");
+                uiFrames = document.getElementById("uiFrames");
+                uiFrames.innerHTML = "";
+                img = document.createElement("img");
+                if (ActionParList.length > 1) {
+                    img.src = ActionParList[1] + "," + ActionParList[2];
+                }
+                else {
+                    img.src = ActionParList[0];
+                }
+                img.style.position = "absolute";
+                img.style.left = "0px";
+                img.style.top = "0px";
+                img.style.width = "" + ViewWidth + "px";
+                img.style.height = "" + ViewHeight + "px";
+                uiFrames.appendChild(img);
+                HandlePan(0, 0, 1, 1);
+                if (ActionRequired) {
+                    ActionAreaX1 = ActionAreaY1 = 0;
+                    ActionAreaX2 = FrameWidth;
+                    ActionAreaY2 = FrameHeight;
+                    ActionWait = 1;
+                }
+                else {
+                    if (previewCallback !== null) previewCallback("start");
+                    playerReportProgress({ action: "Start" });
+                    ReportExit = true;
+                    StartTime = new Date();
+                    PauseLeft = 3 * FramesPerSecond;
+                    PauseLeftStartTime = null;
+                }
+            }
+            else {
+                if (previewCallback !== null) previewCallback("start");
+                playerReportProgress({ action: "Start" });
+                ReportExit = true;
+                StartTime = new Date();
+            }
+        }
+        else if (ActionStr === "Outro") {
+            if (OptEmbedded) {
+                window.parent.continueVideo();
+            }
+            if (UseIntroOutro === true) {
+                if (EndTime === null) EndTime = new Date();
+                hideActionArea();
+                setNote("");
+                var uiCursor = document.getElementById("uiCursor"); if (!ActionRequired && uiCursor !== null) uiCursor.style.display = 'none';
+                uiFrames = document.getElementById("uiFrames");
+                uiFrames.innerHTML = "";
+                img = document.createElement("img");
+                if (ActionParList.length > 1) {
+                    img.src = ActionParList[1] + "," + ActionParList[2];
+                }
+                else {
+                    img.src = ActionParList[0];
+                }
+                img.style.position = "absolute";
+                img.style.left = "0px";
+                img.style.top = "0px";
+                img.style.width = "" + ViewWidth + "px";
+                img.style.height = "" + ViewHeight + "px";
+                uiFrames.appendChild(img);
+                var uiView = document.getElementById("uiView");
+                uiView.style.left = "0px";
+                uiView.style.top = "0px";
+                PanX = PanY = 0;
+                //HandlePan(0, 0, 1, 1);
+                playerUpdateControls();
+            }
+            ReportExit = false;
+            reportEx("BeforeEnd", null, CurrentAction);
+            reportEx("CustomEnd", null, CurrentAction);
+            if (typeof (finalDisplayed) === "function") {
+                finalDisplayed();
+            }
+            if (!toggleFinal(true)) {
+                reportEx("End", null, CurrentAction);
+            }
+            else {
+                DoReportEnd = true;
+            }
+        }
+    }
+    else {
+        stopClickLearnRecording(false);
+    }
+}
+function MouseMove(Left, Top) {
+    if (Scale !== 1.0) { Left = scaleValue(Left, 2); Top = scaleValue(Top, 2); }
+    if (!ActionRequired) {
+        if (VideoFlags & 2)
+            startAnimation("uiCursor", "xy", 2, CurrentMouseLeft, Left, CurrentMouseTop, Top);
+        else
+            startAnimation("uiCursor", "xy", 1, CurrentMouseLeft, Left, CurrentMouseTop, Top);
+    }
+    CurrentMouseLeft = Left;
+    CurrentMouseTop = Top;
+}
+function IsPanNeeded(Left, Top, Right, Bottom) {
+    var CenterX = ViewWidth / 2;
+    var CenterY = ViewHeight / 2;
+    var MinSpaceX = 32;
+    var MinSpaceY = 32;
+    var l = Left + PanX - MinSpaceX;
+    var t = Top + PanY - MinSpaceY;
+    var r = Right + PanX + MinSpaceX;
+    var b = Bottom + PanY + MinSpaceY;
+    var PanNeeded = false;
+    if (l > ViewWidth || t > ViewHeight || r > ViewWidth || b > ViewHeight)
+        PanNeeded = true;
+    if (l < 0 || t < 0 || r < 0 || b < 0)
+        PanNeeded = true;
+    return (PanNeeded);
+}
+function HandlePan(Left, Top, Right, Bottom) {
+    //if (Scale !== 1.0 && !DeepZoom)
+    //    return;
+    if (Right - Left > ViewWidth)
+        Right = Left + ViewWidth;
+    if (Bottom - Top > ViewHeight)
+        Bottom = Top + ViewHeight;
+    var CenterX = ViewWidth / 2;
+    var CenterY = ViewHeight / 2;
+    var PanNeeded = IsPanNeeded(Left, Top, Right, Bottom);
+    //if (Scale !== 1.0)
+    //{
+    //    ZoomInAnimationX.Duration = new Duration(new TimeSpan(0, 0, PanAnimationSeconds));
+    //    ZoomInAnimationX.From = Scale;
+    //    ZoomInAnimationX.To = 1.0;
+    //    ZoomInAnimationY.Duration = new Duration(new TimeSpan(0, 0, PanAnimationSeconds));
+    //    ZoomInAnimationY.From = Scale;
+    //    ZoomInAnimationY.To = 1.0;
+    //}
+    var OldPanX = PanX;
+    var OldPanY = PanY;
+    if (PanNeeded) {
+        if (Right - Left <= ViewWidth)
+            Left += (Right - Left) / 2;
+        if (Bottom - Top <= ViewHeight)
+            Top += (Bottom - Top) / 2;
+        PanX = ViewWidth - Left - CenterX;
+        PanY = ViewHeight - Top - CenterY;
+        if (PanX > 0) PanX = 0;
+        if (PanY > 0) PanY = 0;
+        if (ViewWidth - PanX > FrameWidth) PanX = ViewWidth - FrameWidth;
+        if (ViewHeight - PanY > FrameHeight) PanY = ViewHeight - FrameHeight;
+        //PanAnimationX.From = OldPanX;
+        //PanAnimationX.To = PanX;
+        //PanAnimationX.Duration = new Duration(new TimeSpan(0, 0, PanAnimationSeconds));
+        //PanAnimationY.From = OldPanY;
+        //PanAnimationY.To = PanY;
+        //PanAnimationY.Duration = new Duration(new TimeSpan(0, 0, PanAnimationSeconds));
+    }
+    //if (Scale !== 1.0)
+    //{
+    //  if (!DeepZoomOnlyWhenPanNeeded || PanNeeded || LayoutScale.ScaleX === Scale)
+    //  {
+    //    CurrentScale = (DeepZoom) ? 1.0 : Scale;
+    //    if (!justFit)
+    //    {
+    //      ZoomInAnimation.Begin();
+    //    }
+    //  }
+    //}
+    if (PanNeeded && (OldPanX !== PanX || OldPanY !== PanY)) {
+        startAnimation("uiView", "xy", 1, OldPanX, PanX, OldPanY, PanY);
+        //PanAnimation.Begin();
+    }
+}
+function scaleValue(v, r) {
+    v *= Scale;
+    //if (r !== 0) v += 3.5;
+    return (v);
+}
+function addImage(parlist) {
+    var uiFrames = document.getElementById("uiFrames");
+    var no, x, y, w, h;
+    no = parseInt(parlist[0]);
+    x = parseInt(parlist[1]);
+    y = parseInt(parlist[2]);
+    w = parseInt(parlist[3]);
+    h = parseInt(parlist[4]);
+    var needWidth = false;
+    if (w === -1 && h === -1) {
+        w = Scale === 1.0 ? ViewWidth : OrgFrameWidth;
+        h = Scale === 1.0 ? ViewHeight : OrgFrameHeight;
+        needWidth = true;
+    }
+    if (x === 0 && y === 0 && w === OrgFrameWidth && h === OrgFrameHeight)
+        uiFrames.innerHTML = "";
+    var img = document.createElement("img");
+    if (parlist.length > 5 && parlist[5].substr(0, 5) === "data:") {
+        img.src = parlist[5] + "," + parlist[6];
+    }
+    else {
+        if (UsePNG)
+            img.src = "cl" + no + ".png";
+        else
+            img.src = "cl" + no + ".jpg";
+    }
+    img.style.position = "absolute";
+    if (Scale !== 1.0) { x = scaleValue(x, 2); y = scaleValue(y, 2); w = scaleValue(w, 0); h = scaleValue(h, 0); }
+    img.style.left = "" + x + "px";
+    img.style.top = "" + y + "px";
+    if (Scale !== 1.0 || needWidth) { img.style.width = "" + w + "px"; }
+    uiFrames.appendChild(img);
+}
+function setNote(pars) {
+    if (UseAssistImage && !IsElearning) { if (pars === "") clVideoAssistJS.ClearAssist(); return; }
+    var uiNoteText = document.getElementById("uiNoteText");
+    if (true || isFireFox)
+        uiNoteText.innerHTML = pars.replace(/\\r\\n/g, "<br/>");
+    else
+        uiNoteText.innerText = pars.replace(/\\r\\n/g, "<br/>");
+    uiNoteText.style.display = (pars === "") ? "none" : "inline-block";
+}
+function setIntroTitle(pars) {
+    var uiIntroTitleText = document.getElementById("uiIntroTitleText");
+    if (true || isFireFox)
+        uiIntroTitleText.innerHTML = pars.replace(/\\r\\n/g, "\r\n");
+    else
+        uiIntroTitleText.innerText = pars.replace(/\\r\\n/g, "\r\n");
+    uiIntroTitleText.style.display = (pars === "") ? "none" : "inline-block";
+    var uiIntroTitle = document.getElementById("uiIntroTitle");
+    uiIntroTitle.style.display = (pars === "") ? "none" : "";
+}
+function setIntroDescription(pars) {
+    var uiIntroTitleText = document.getElementById("uiIntroTitleText");
+    var desc = document.createElement("DIV");
+    desc.className = "cljsvIntroDescText";
+    if (true || isFireFox)
+        desc.innerHTML = pars.replace(/\\r\\n/g, "<br/>");
+    else
+        desc.innerText = pars.replace(/\\r\\n/g, "\r\n");
+    uiIntroTitleText.appendChild(desc);
+}
+function doAnimation(m) {
+    if (!m) {
+        AnimationFrom += AnimationValue;
+        AnimationFrom2 += AnimationValue2;
+    }
+    else {
+        CurrentFrameCount += AnimationLeft;
+        AnimationFrom = AnimationTo;
+        AnimationFrom2 = AnimationTo2;
+        AnimationLeft = 0;
+    }
+    if (AnimationType === "fade") {
+        try { AnimationElement.style.opacity = AnimationFrom; } catch (e) { var emsg = e.message; }
+        if (AnimationFrom + AnimationValue >= AnimationTo && AnimationTo === 1.0) AnimationElement.style.display = "block";
+        else if (AnimationFrom <= AnimationTo && AnimationTo - AnimationValue <= 0.0) AnimationElement.style.display = "none";
+    }
+    else if (AnimationType === "xy") {
+        AnimationElement.style.left = "" + AnimationFrom + "px";
+        AnimationElement.style.top = "" + AnimationFrom2 + "px";
+    }
+}
+function startAnimation(id, typ, duration, from, to, from2, to2) {
+    AnimationElement = document.getElementById(id);
+    if (AnimationElement === null)
+        return;
+    AnimationType = typ;
+    AnimationLeft = duration * FramesPerSecond;
+    if (AnimationLeft === 0)
+        AnimationLeft = 1;
+    AnimationFrom = from;
+    AnimationTo = to;
+    AnimationValue = (to - from) / AnimationLeft;
+    AnimationFrom2 = from2;
+    AnimationTo2 = to2;
+    AnimationValue2 = (to2 - from2) / AnimationLeft;
+}
+function doChapter(parlist, nextAction) {
+    var uiChapter = document.getElementById("uiChapter");
+    no = parseInt(parlist[0]);
+    if (no === 0) {
+        setIntroTitle("");
+        ChapterState = 1;
+        hideActionArea();
+        doAnimation(1);
+        setNote("");
+        PauseLeft = 0;
+        var uiChapterImage = document.getElementById("uiChapterImage");
+        j = nextAction.indexOf("=");
+        ActionStr = (j > 0) ? nextAction.substr(0, j) : "";
+        ActionPars = (j > 0) ? nextAction.substr(j + 1) : "";
+        ActionParList = ActionPars.split(",");
+        no = parseInt(ActionParList[0]);
+        try {
+            addImage(ActionParList);
+            var uiFrames = document.getElementById("uiFrames");
+            uiChapterImage.src = uiFrames.firstChild.src;
+            if (isOldAudio)
+                uiChapterImage.style.zoom = "60%";
+        }
+        catch (err) {
+            var errmsg = err.message;
+        }
+        var cTitle = parlist.join(",").substr(2);
+        playerReportProgress({ action: "Chapter", intValue1: CurrentAction, txtValue3: cTitle });
+        if (true || isFireFox)
+            uiChapterText.innerHTML = cTitle;
+        else
+            uiChapterText.innerText = cTitle;
+    }
+    else if (no === 1) { // fade in
+        ChapterState = 2;
+        startAnimation("uiChapter", "fade", ChapterSecs / 2, 0.0, 1.0, 0.0, 0.0);
+    }
+    else if (no === 2) { // fade out
+        ChapterState = 3;
+        startAnimation("uiChapter", "fade", ChapterSecs / 2, 1.0, 0.0, 0.0, 0.0);
+    }
+}
+function showActionArea() {
+    ActionAreaElement.style.display = "block";
+    ActionAreaVisible = true;
+}
+function hideActionArea() {
+    if (ActionAreaVisible) {
+        ActionAreaElement.style.display = "none";
+        ActionAreaVisible = false;
+    }
+    if (UseAssistImage && !IsElearning) clVideoAssistJS.ClearAssist();
+}
+var OldSoundSrc = null;
+function playOldSound(srcStr) {
+    OldSoundSrc = srcStr;
+    w = window.createPopup();
+    w.document.body.innerHTML = '&nbsp;<bgsound src="' + srcStr + '"/>';
+    w.show(0, 0, 1, 1, document.body);
+}
+
+function playSound(parlist) {
+    if (!DoSound)
+        return;
+    no = parseInt(parlist[0]);
+    findSoundElement();
+    try {
+        if (parlist.length > 1 && parlist[1].substr(0, 5) === "data:") {
+            CurrentSoundSrc = parlist[1] + "," + parlist[2];
+        }
+        else {
+            CurrentSoundSrc = "cl" + no + ".mp3";
+        }
+        if (isSafari || isOldAudio) {
+            if (!isOldAudio && CurrentSoundElement.tagName === "AUDIO") {
+                CurrentSoundElement.pause();
+            }
+            else {
+                if (isOldAudio) {
+                    playOldSound(CurrentSoundSrc);
+                }
+                else {
+                    var es = '<embed id="uiAudio2" src="' + CurrentSoundSrc + '" width="0" heigth="0" style="display:none;"></embed>';
+                    CurrentSoundElement.outerHTML = es;
+                    CurrentSoundElement = null;
+                    findSoundElement();
+                    CurrentSoundElement.play();
+                }
+            }
+        }
+        else {
+            CurrentSoundElement.pause();
+        }
+    }
+    catch (e) {
+        //alert(e + CurrentSoundElement.tagName);
+        //CurrentSoundElement = null;
+    }
+}
+function playSoundLoop(parlist) {
+    no = parseInt(parlist[0]);
+    findSoundLoopElement();
+    try {
+        if (parlist.length > 1 && parlist[1].substr(0, 5) === "data:") {
+            CurrentSoundLoopSrc = parlist[1] + "," + parlist[2];
+        }
+        else {
+            CurrentSoundLoopSrc = "cl" + no + ".mp3";
+        }
+        if (isSafari || isOldAudio) {
+            if (!isOldAudio && CurrentSoundLoopElement.tagName === "AUDIO") {
+                //CurrentSoundLoopElement.pause();
+            }
+            else {
+                var es = '<embed id="uiAudio2" src="' + CurrentSoundLoopSrc + '" width="0" heigth="0" style="display:none;"></embed>';
+                CurrentSoundLoopElement.outerHTML = es;
+                CurrentSoundLoopElement = null;
+                findSoundLoopElement();
+                CurrentSoundLoopElement.play();
+            }
+        }
+        else {
+            CurrentSoundLoopElement.src = CurrentSoundLoopSrc;
+            CurrentSoundLoopElement.play();
+        }
+    }
+    catch (e) {
+        //alert(e + CurrentSoundLoopElement.tagName);
+        //CurrentSoundLoopElement = null;
+    }
+}
+function playerNewSound() {
+    if (isOldAudio) {
+        if (CurrentSoundSrc !== OldSoundSrc) {
+            playOldSound(CurrentSoundSrc);
+        }
+        return;
+    }
+    if (typeof (CurrentSoundElement) !== "undefined") {
+        if (CurrentSoundElement.src !== CurrentSoundSrc) {
+            CurrentSoundElement.src = CurrentSoundSrc;
+            CurrentSoundSrc = SilentMp3;
+        }
+        CurrentSoundElement.load();
+        CurrentSoundElement.play();
+    }
+}
+function findSoundElement() {
+    if (CurrentSoundElement === null) {
+        if (isSafari || isOldAudio)
+            CurrentSoundElement = null; // document.getElementById("uiAudio2");
+        if (CurrentSoundElement === null) {
+            CurrentSoundElement = document.getElementById("uiAudio");
+            if (CurrentSoundElement !== null) {
+                try {
+                    CurrentSoundElement.loop = false;
+                    CurrentSoundElement.addEventListener('ended', playerNewSound, false);
+                    CurrentSoundElement.addEventListener('pause', playerNewSound, false);
+                    CurrentSoundElement.play();
+                }
+                catch (e) {
+                    var emsg = e.message;
+                }
+            }
+        }
+    }
+}
+function findSoundLoopElement() {
+    if (CurrentSoundLoopElement === null) {
+        if (isSafari || isOldAudio)
+            CurrentSoundLoopElement = null; // document.getElementById("uiAudioLoop2");
+        if (CurrentSoundLoopElement === null) {
+            CurrentSoundLoopElement = document.getElementById("uiAudioLoop");
+            CurrentSoundLoopElement.loop = true;
+            //CurrentSoundLoopElement.play();
+        }
+    }
+}
+function stopAllSound() {
+    if (isOldAudio) {
+        playOldSound('');
+        return;
+    }
+    if (CurrentSoundElement !== null) {
+        try {
+            CurrentSoundElement.removeEventListener('ended', playerNewSound);
+            CurrentSoundElement.removeEventListener('pause', playerNewSound);
+            CurrentSoundElement.pause();
+            CurrentSoundElement = null;
+        }
+        catch (e) {
+            var emsg = e.message;
+        }
+    }
+    if (CurrentSoundLoopElement !== null) {
+        CurrentSoundLoopElement.pause();
+    }
+}
+function getEventXy(o) {
+    var x, y;
+    if (isSafari) // Safari
+    {
+        x = o.offsetX;
+        y = o.offsetY;
+    }
+    else if (isFireFox) // FireFox
+    {
+        x = o.layerX;
+        y = o.layerY;
+    }
+    else // IE
+    {
+        //x = o.x;
+        //y = o.y;
+        var v = document.getElementById("cljsv");
+        x = o.clientX - v.offsetLeft;
+        y = o.clientY - v.offsetTop;
+        if (x - PanX > ActionAreaX2 + 4) { // HACK: IE
+            if (o.layerX - PanX >= ActionAreaX1 - ActionAreaElementThickness && o.layerX - PanX <= ActionAreaX2 + ActionAreaElementThickness && o.layerY - PanY >= ActionAreaY1 - ActionAreaElementThickness && o.layerY - PanY <= ActionAreaY2 + ActionAreaElementThickness) {
+                x = o.layerX;
+                y = o.layerY;
+            }
+        }
+    }
+    x -= PanX; // TODO: Why this - 48 ?
+    y -= PanY;
+    return ({ x: x, y: y });
+}
+function playerMouseMove(e, emode) {
+    var ev = e || window.event;
+    if (typeof (ev.stopPropagation) !== "undefined") ev.stopPropagation();
+    else if (typeof (ev.cancelBubble) !== "undefined") ev.cancelBubble = true;
+    if ((UseGreenRect || IsMouseMove) && (!UseIntroOutro || IntroDone)) {
+        var x, y;
+        if (ev === null || emode) {
+            x = ActionAreaX1;
+            y = ActionAreaY1;
+        }
+        else {
+            var o = getEventXy(ev);
+            x = o.x;
+            y = o.y;
+        }
+        if (IsMouseMove) {
+            if (x >= ActionAreaX1 - ActionAreaElementThickness && x <= ActionAreaX2 + ActionAreaElementThickness && y >= ActionAreaY1 - ActionAreaElementThickness && y <= ActionAreaY2 + ActionAreaElementThickness) {
+                IsMouseMove = false;
+                playerActionCorrect();
+            }
+        }
+        else {
+            if (x >= ActionAreaX1 - ActionAreaElementThickness && x <= ActionAreaX2 + ActionAreaElementThickness && y >= ActionAreaY1 - ActionAreaElementThickness && y <= ActionAreaY2 + ActionAreaElementThickness) {
+                ActionAreaElement.style.display = "block";
+                ActionAreaVisible = true;
+            }
+            else {
+                ActionAreaElement.style.display = "none";
+                ActionAreaVisible = false;
+            }
+        }
+    }
+}
+function playerActionCorrect() {
+    playerActionCorrectEx(true);
+}
+function playerActionCorrectEx(reportCorrect) {
+    if (!UseIntroOutro || IntroDone) {
+        setNote("");
+        if (reportCorrect) {
+            var ca = FindActionWaitLocation();
+            if (ca >= 0) {
+                CorrectCnt++;
+                reportEx("Correct", ActionAreaLocation, ca);
+            }
+        }
+        toggleComment(false);
+    }
+    if (UseIntroOutro && !IntroDone) {
+        if (previewCallback !== null) previewCallback("start");
+        var startResult = playerReportProgress({ action: "Start" });
+        if (startResult !== null && startResult.indexOf("ERROR") === 0) {
+            return;
+        }
+        ReportExit = true;
+        StartTime = new Date();
+        playerSetIntroTitle();
+    }
+    hideActionArea();
+    ActionWait = (ActionWait === 1) ? 0 : -1;
+    if (PauseLeft > 0) {
+        CurrentFrameCount += PauseLeft - 1;
+        PauseLeft = 1;
+        if (isOldAudio)
+            playOldSound('');
+        else if (CurrentSoundElement !== null)
+            CurrentSoundElement.pause();
+    }
+}
+function playerClicked(e, emode) {
+    var ev = e || window.event;
+    if (typeof (ev.stopPropagation) !== "undefined") ev.stopPropagation();
+    else if (typeof (ev.cancelBubble) !== "undefined") ev.cancelBubble = true;
+    var srcElm = null;
+    if (typeof (ev.srcElement) !== "undefined") {
+        srcElm = ev.srcElement;
+        while (srcElm !== null) {
+            if (typeof (srcElm.id) !== "undefined" && srcElm.id !== null && srcElm.id !== "")
+                break;
+            srcElm = srcElm.parentElement;
+        }
+    }
+    if (finalIsOn || (!ReportExit && EndTime !== null)) {
+        ;
+    }
+    else if ((!UseIntroOutro || IntroDone) && !ActionRequired && !QuestionOn && (srcElm === null || typeof (srcElm.id) === "undefined" || srcElm.id === null || srcElm.id !== "uiNoteText")) {
+        playerDoControl(e, 'p');
+    }
+    else if (!IsMouseMove && !IsRightClick) {
+        findSoundElement();
+        var x, y;
+        if (ev === null || emode) {
+            x = ActionAreaX1;
+            y = ActionAreaY1;
+        }
+        else {
+            var o = getEventXy(ev);
+            x = o.x;
+            y = o.y;
+        }
+        if (srcElm !== null && srcElm.id === "uiNoteText") {
+            if (ActionWait !== 1 && !ActionAreaVisible)
+                playerActionCorrectEx(false);
+        }
+        else if (x >= ActionAreaX1 - ActionAreaElementThickness && x <= ActionAreaX2 + ActionAreaElementThickness && y >= ActionAreaY1 - ActionAreaElementThickness && y <= ActionAreaY2 + ActionAreaElementThickness) {
+            ActionAreaX1 = ActionAreaX2 = ActionAreaY1 = ActionAreaY2 = 0;
+            playerActionCorrect();
+        }
+        else {
+            if (ActionWait === 1) {
+                if (WrongFirst) {
+                    WrongCnt++;
+                    WrongFirst = false;
+                }
+                var ca = FindActionWaitLocation(CurrentAction);
+                if (ca >= 0) {
+                    var wrv = reportEx("Wrong", ActionAreaLocation, ca);
+                    if (IsElearning && typeof (wrv) === "boolean" && wrv && !UseGreenRect) {
+                        showActionArea();
+                    }
+                }
+            }
+            //var id = (o.srcElement !== null) ? o.srcElement.outerHTML : "???";
+            //alert("x="+x+",y="+y+",ax1="+ActionAreaX1+",ax2="+ActionAreaX2+",ay1="+ActionAreaY1+",ay2="+ActionAreaY2+",pan=" + PanX + "," + PanY + ",id="+id);
+        }
+    }
+}
+function playerRightClicked(e, emode) {
+    var ev = e || window.event;
+    if (typeof (ev.stopPropagation) !== "undefined") ev.stopPropagation();
+    else if (typeof (ev.cancelBubble) !== "undefined") ev.cancelBubble = true;
+    if (IsRightClick) {
+        findSoundElement();
+        var x, y;
+        if (ev === null || emode) {
+            x = ActionAreaX1;
+            y = ActionAreaY1;
+        }
+        else {
+            var o = getEventXy(ev);
+            x = o.x;
+            y = o.y;
+        }
+        if (x >= ActionAreaX1 - ActionAreaElementThickness && x <= ActionAreaX2 + ActionAreaElementThickness && y >= ActionAreaY1 - ActionAreaElementThickness && y <= ActionAreaY2 + ActionAreaElementThickness) {
+            playerActionCorrect();
+        }
+        else {
+            if (ActionWait === 1) {
+                if (WrongFirst) {
+                    WrongCnt++;
+                    WrongFirst = false;
+                }
+                var wrv = reportEx("Wrong", ActionAreaLocation, CurrentAction);
+                if (IsElearning && typeof (wrv) === "boolean" && wrv && !UseGreenRect) {
+                    ActionAreaElement.style.display = "block";
+                    ActionAreaVisible = true;
+                }
+            }
+            //var id = (o.srcElement !== null) ? o.srcElement.outerHTML : "???";
+            //alert("x="+x+",y="+y+",ax1="+ActionAreaX1+",ax2="+ActionAreaX2+",ay1="+ActionAreaY1+",ay2="+ActionAreaY2+",pan=" + PanX + "," + PanY + ",id="+id);
+        }
+    }
+}
+function playerExit() {
+    if (StartTime === null) StartTime = new Date();
+    if (ReportExit) {
+        ReportExit = false;
+        reportEx("Exit", null, CurrentAction);
+    }
+    else if (DoReportEnd) {
+        DoReportEnd = false;
+        reportEx("End", null, CurrentAction);
+    }
+}
+
+function playerFit(m) {
+    var padding = 0; /* changed from -64 */
+    var vf = OrgFrameWidth / OrgFrameHeight;
+    var vmaxwidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    if (isNaN(vmaxwidth))
+        vmaxwidth = OrgFrameWidth;
+    else
+        vmaxwidth = vmaxwidth - padding;
+    var vmaxheight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+    if (isNaN(vmaxheight))
+        vmaxheight = OrgFrameHeight;
+    else
+        vmaxheight = vmaxheight - padding;
+    if (m || ViewWidth > OrgFrameWidth)
+        ViewWidth = vmaxwidth;
+    if (ViewWidth > OrgFrameWidth)
+        ViewWidth = OrgFrameWidth;
+    ViewHeight = Math.round(ViewWidth / vf);
+    if (ViewHeight > vmaxheight) {
+        ViewHeight = vmaxheight;
+        if (ViewHeight > OrgFrameHeight)
+            ViewHeight = OrgFrameHeight;
+        ViewWidth = Math.round(ViewHeight * vf);
+    }
+}
+
+function playerScale() {
+    if (DoScale) {
+        Scale = ViewWidth / OrgFrameWidth;
+        FrameWidth = ViewWidth;
+        FrameHeight = ViewHeight;
+    }
+    else {
+        Scale = 1.0;
+        FrameWidth = OrgFrameWidth;
+        FrameHeight = OrgFrameHeight;
+    }
+    var uiView = document.getElementById("uiView");
+    uiView.style.width = "" + FrameWidth + "px";
+    uiView.style.height = "" + FrameHeight + "px";
+}
+
+function playerResized() {
+    var oldViewWidth = ViewWidth;
+    var oldViewHeight = ViewHeight;
+    if (DoFit > 0)
+        playerFit(DoFit - 1);
+    playerScale();
+    if (ViewWidth !== oldViewWidth || ViewHeight !== oldViewHeight) {
+        var uiPlayer = document.getElementById("uiPlayer");
+        uiPlayer.style.width = "" + ViewWidth + "px";
+        uiPlayer.style.height = "" + ViewHeight + "px";
+    }
+    if (UseIntroOutro && (!IntroDone || EndTime !== null)) {
+        var uiFrames = document.getElementById("uiFrames");
+        var img = uiFrames.firstElementChild;
+        if (img !== null) {
+            img.style.width = "" + ViewWidth + "px";
+            img.style.height = "" + ViewHeight + "px";
+            HandlePan(0, 0, 1, 1);
+        }
+    }
+    else {
+        playFromLocation("" + CurrentAction);
+        HandlePan(0, 0, 1, 1);
+        //        HandlePan(ActionAreaX1, ActionAreaY1, ActionAreaX2, ActionAreaY2);
+    }
+    playerUpdateControls();
+}
+
+function playerIgnoreClick(e) {
+    var ev = e || window.event;
+    if (typeof (ev.stopPropagation) !== "undefined") ev.stopPropagation();
+    else if (typeof (ev.cancelBubble) !== "undefined") ev.cancelBubble = true;
+}
+
+function playerDoControl(e, c) {
+    var uiPauseImage, cle;
+    var ev = e || window.event;
+    if (ev === null || ev === undefined);
+    else if (typeof (ev.stopPropagation) !== "undefined") ev.stopPropagation();
+    else if (typeof (ev.cancelBubble) !== "undefined") ev.cancelBubble = true;
+    var elem = document.getElementById("cljsv").parentElement;
+    if (c === 'f') { // full screen 
+        if (!(document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement || document.msFullscreenElement)) {
+            if (elem.requestFullscreen) elem.requestFullscreen();
+            else if (elem.msRequestFullscreen) elem.msRequestFullscreen();
+            else if (elem.mozRequestFullScreen) elem.mozRequestFullScreen();
+            else if (elem.webkitRequestFullscreen) elem.webkitRequestFullscreen();
+            if (previewCallback !== null) previewCallback("fullscreen");
+        }
+        else {
+            elem = document;
+            if (elem.exitFullscreen) elem.exitFullscreen();
+            else if (elem.msExitFullscreen) elem.msExitFullscreen();
+            else if (elem.mozCancelFullScreen) elem.mozCancelFullScreen();
+            else if (elem.webkitExitFullscreen) elem.webkitExitFullscreen();
+            if (previewCallback !== null) previewCallback("restore");
+        }
+    }
+    else if (c === 'p') { // play/pause
+        if (EndTime !== null) { // replay video
+            if (previewCallback !== null) previewCallback("replay");
+            playerReportProgress({ action: "Replay" });
+            toggleFinal(false);
+            EndTime = null;
+            StartTime = null;
+            playerSetCurrentAction(0);
+            IntroDone = false;
+            playerResized();
+            if (CurrentInterval === null) {
+                CurrentInterval = setInterval(playFrame, 1000 / FramesPerSecond);
+            }
+        }
+        else if (UseIntroOutro && !IntroDone && ActionRequired) {
+            playerActionCorrectEx(false);
+        }
+        else {
+            if (!isPaused) {
+                if (previewCallback !== null) previewCallback("pause");
+                playerReportProgress({ action: "Pause", intValue1: CurrentAction, txtValue3: CurrentActionTxt });
+                isPaused = true;
+                if (PauseLeft > 0) {
+                    CurrentFrameCount += PauseLeft - 1;
+                    PauseLeft = 1;
+                    try {
+                        if (isOldAudio)
+                            playOldSound('');
+                        else if (CurrentSoundElement !== null)
+                            CurrentSoundElement.pause();
+                    } catch (e) {
+                        var emsg = e.message;
+                    }
+                }
+                uiPauseImage = document.getElementById("uiPauseImage");
+                if (uiPauseImage !== null)
+                    uiPauseImage.style.display = 'block';
+            }
+            else {
+                if (previewCallback !== null) previewCallback("play");
+                playerReportProgress({ action: "Continue", intValue1: CurrentAction, txtValue3: CurrentActionTxt });
+                isPaused = false;
+                uiPauseImage = document.getElementById("uiPauseImage");
+                if (uiPauseImage !== null)
+                    uiPauseImage.style.display = 'none';
+            }
+        }
+    }
+    else if (c === 's') { // scale
+        if (previewCallback !== null) previewCallback(!DoScale ? "scale" : "pan");
+        DoScale = !DoScale;
+        playerReportProgress({ action: "Scale", intValue2: DoScale ? 1 : 0, intValue1: CurrentAction, txtValue3: CurrentActionTxt });
+        playerResized();
+    }
+    else if (c === 'a') { // audio
+        if (previewCallback !== null) previewCallback(!DoSound ? "unmute" : "mute");
+        DoSound = !DoSound;
+        playerReportProgress({ action: "Sound", intValue2: DoSound ? 1 : 0, intValue1: CurrentAction, txtValue3: CurrentActionTxt });
+        if (!DoSound) {
+            try {
+                if (isOldAudio)
+                    playOldSound('');
+                else if (CurrentSoundElement !== null)
+                    CurrentSoundElement.pause();
+            } catch (e2) {
+                var emsg2 = e2.message;
+            }
+        }
+    }
+    else if (c === 'n') { // next
+        //self.location.href = self.location.href;
+        cle = document.getElementById("clvc_chapters");
+        if (cle !== null) {
+            if (cle.style.display === "" || cle.style.display === 'none') {
+                cle.style.display = 'inline-block';
+            }
+            else {
+                cle.style.display = 'none';
+            }
+        }
+    }
+    else if (c === 'i') {
+        cle = document.getElementById("clvc_comments");
+        if (cle !== null) {
+            if (cle.style.display === "" || cle.style.display === 'none') {
+                cle.style.display = 'inline-block';
+            }
+            else {
+                cle.style.display = 'none';
+            }
+        }
+    }
+    playerUpdateControls();
+}
+
+function playerUpdateControls() {
+    var e;
+    if ((e = document.getElementById("clvc_play")) !== null) {
+        e.className = !isPaused && EndTime === null ? e.className.replace("_on", "_off") : e.className.replace("_off", "_on");
+    }
+    if ((e = document.getElementById("clvc_sound")) !== null) {
+        e.className = !DoSound ? e.className.replace("_on", "_off") : e.className.replace("_off", "_on");
+    }
+    if ((e = document.getElementById("clvc_scale")) !== null) {
+        e.className = !DoScale ? e.className.replace("_on", "_off") : e.className.replace("_off", "_on");
+    }
+    if ((e = document.getElementById("clvc_fullscreen")) !== null) {
+        var isFullScreen = document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement || document.msFullscreenElement;
+        e.className = isFullScreen ? e.className.replace("_on", "_off") : e.className.replace("_off", "_on");
+    }
+}
+
+function playerTimelineControl(e, m) {
+    var ev = e || window.event;
+    var vcc = document.getElementById("clvc_control");
+    if (vcc !== null) {
+        if (OptControls === 2) {
+            if (m === -1) {
+                try {
+                    if (ev.srcElement.id === "clvc_control") {
+                        var te = ev.toElement;
+                        if (typeof (te) === "undefined")
+                            te = te.relatedElement;
+                        if (typeof (te) === "undefined")
+                            te = null;
+                        if (te === null || (te.id === null || te.id.indexOf("clvc_group") !== 0)) {
+                            var vctl = document.getElementById("clvc_timeline");
+                            vcc.style.height = "" + vctl.clientHeight + "px";
+                        }
+                    }
+                } catch (e) {
+                    //document.getElementById("tst8").innerHTML = e.message;
+                }
+                return;
+            }
+            else if (vcc.clientHeight < 10) {
+                vcc.style.height = "";
+            }
+        }
+        var z = document.getElementById("clvc_tlp2");
+        if (z !== null) {
+            if (m === 0)
+                z.style.display = "none";
+            else if (m >= 1 && m <= 2) {
+                var x, y;
+                if (ev === null) {
+                    x = 100;
+                    y = 0;
+                }
+                else {
+                    var o = getEventXy(ev);
+                    x = o.x;
+                    y = o.y;
+                }
+                z.style.left = "" + (x - (z.clientWidth / 2)) + "px";
+                z.style.display = "block";
+                if (m === 2) {
+                    if (typeof (ev.stopPropagation) !== "undefined") ev.stopPropagation();
+                    else if (typeof (ev.cancelBubble) !== "undefined") ev.cancelBubble = true;
+                    var z2 = document.getElementById("clvc_timeline");
+                    var ca = Math.round(ActionList.length * (x / z2.clientWidth));
+                    playerReportProgress({ action: "TimeLine", intValue2: ca, intValue1: CurrentAction, txtValue3: CurrentActionTxt });
+                    playerSetCurrentAction(ca);
+                    if (previewCallback !== null) previewCallback("timeline=" + CurrentFrameCount);
+                    playerActionCorrect();
+                    playerResized();
+                }
+            }
+        }
+    }
+}
+
+function playerSelectChapter(e) {
+    var ev = e || window.event;
+    if (ev === undefined || ev === null);
+    else if (typeof (ev.stopPropagation) !== "undefined") ev.stopPropagation();
+    else if (typeof (ev.cancelBubble) !== "undefined") ev.cancelBubble = true;
+    try {
+        var cle = document.getElementById("clvc_chapters");
+        if (cle !== null) {
+            cle.style.display = 'none';
+        }
+        var i = ev.srcElement.id.substr(11);
+        if (UseIntroOutro) {
+            ActionAreaX1 = ActionAreaX2 = ActionAreaY1 = ActionAreaY2 = 0;
+            IntroDone = true;
+        }
+        playerReportProgress({ action: "ChapterJump", intValue2: ChapterList[i].locationidx, intValue1: CurrentAction, txtValue3: ChapterList[i].title });
+        playerSetCurrentAction(ChapterList[i].idx);
+        if (previewCallback !== null) previewCallback("chapter=" + ChapterList[i].title);
+        playerResized();
+    } catch (ex) {
+        var exmsg = ex.message;
+    }
+}
+function setDOMvalue(e, id, styleid, txt, removeid) {
+    try {
+        for (var i = 0; i < e.children.length; i++) {
+            var c = e.children[i];
+            if (typeof (c.id) !== "undefined" && c.id === id) {
+                if (removeid) c.removeAttribute("id");
+                if (styleid === null)
+                    c.textContent = txt;
+                else if (styleid === "className" && typeof (c.className) !== "undefined" && c.className !== null)
+                    c.className += " " + txt;
+                else
+                    c.style[styleid] = txt;
+                return (true);
+            }
+            else if (setDOMvalue(c, id, styleid, txt, removeid)) {
+                return (true);
+            }
+        }
+    } catch (ex) {
+        var exmsg = ex.message;
+    }
+    return (false);
+}
+function setMLtext(e) {
+    try {
+        for (key in cljsv_ml) {
+            var txt = cljsv_ml[key];
+            setDOMvalue(e, "ml_" + key, null, txt, false);
+        }
+    } catch (ex) {
+        var exmsg = ex.message;
+    }
+}
+function prepareFinal(e) {
+    try {
+        setMLtext(e);
+        var t = document.getElementById("er_stepbody");
+        if (t !== null) {
+            var r = document.getElementById("er_steprow");
+            var cr = r.cloneNode(true);
+            t.removeChild(r);
+            for (key in eLearnReport.Steps) {
+                var s = eLearnReport.Steps[key];
+                var newrow = cr.cloneNode(true);
+                newrow.id = null;
+                setDOMvalue(newrow, "er_sno", null, "" + s.no, true);
+                var txt = s.txt.replace("&lt;b&gt;", "").replace("&lt;/b&gt;", "").replace("&lt;br/&gt;", "\n");
+                setDOMvalue(newrow, "er_stxt", null, txt, true);
+                setDOMvalue(newrow, "er_upoints", null, "" + s.points, true);
+                setDOMvalue(newrow, "er_spoints", null, "" + eLearnStepPoints, true);
+                setDOMvalue(newrow, "er_scolor", "background-color", s.color, true);
+                setDOMvalue(newrow, "er_sclass", "className", "score-" + s.color, true);
+                t.appendChild(newrow);
+            }
+        }
+        t = document.getElementById("er_totals");
+        if (t !== null) {
+            setDOMvalue(t, "er_pctbar", "width", "" + Math.round(eLearnReport.pct, 0) + "%", false);
+            setDOMvalue(t, "er_pctbar", "background-color", eLearnReport.color, true);
+            setDOMvalue(t, "er_pct", null, "" + eLearnReport.pct, true);
+            setDOMvalue(t, "er_userpoints", null, "" + eLearnReport.userpoints, true);
+            setDOMvalue(t, "er_totalpoints", null, "" + eLearnReport.totalpoints, true);
+        }
+        setDOMvalue(e, "er_message", null, "" + eLearnReport.message, false);
+        setDOMvalue(e, "er_message", "className", "score-" + eLearnReport.color, true);
+    } catch (ex) {
+        alert(ex.message);
+    }
+}
+function playerReportProgress(Obj) {
+    try {
+        if (IsElearning) {
+            if ((Obj.action === "Wrong" || Obj.action === "Correct") && typeof (Obj.location) !== "undefined" && Obj.location !== null && typeof (Obj.txt) !== "undefined" && Obj.txt !== null) {
+                var n = "step" + Obj.location;
+                if (typeof (eLearnReport.Steps[n]) === "undefined") {
+                    eLearnReport.Steps[n] = Obj;
+                    eLearnReport.Steps[n]["wrongcount"] = 0;
+                }
+                if (Obj.action === "Wrong") {
+                    eLearnReport.Steps[n]["wrongcount"]++;
+                    if (eLearnReport.Steps[n]["wrongcount"] >= eLearnStepPoints) {
+                        showActionArea();
+                    }
+                }
+                eLearnReport.Steps[n].action = Obj.action;
+            }
+            else if (Obj.action === "BeforeEnd") {
+                eLearnReport.Obj = Obj;
+                var totalpoints = 0;
+                var userpoints = 0;
+                var no = 0;
+                for (step in eLearnReport.Steps) {
+                    totalpoints += eLearnStepPoints;
+                    var o = eLearnReport.Steps[step];
+                    var points = 0;
+                    var wrongcount = o.wrongcount;
+                    if (wrongcount > eLearnStepPoints)
+                        wrongcount = eLearnStepPoints;
+                    if (o.action === "Correct")
+                        points = eLearnStepPoints - wrongcount;
+                    userpoints += points;
+                    o["no"] = ++no;
+                    o["points"] = points;
+                    o["color"] = points === eLearnStepPoints ? "green" : (points >= eLearnStepPoints / 2) ? "yellow" : "red";
+                }
+                var pct = Math.round((userpoints / totalpoints) * 100.0, 1);
+                var pcolor = pct >= eLearnMinPercent ? "green" : (pct >= eLearnMinPercent / 2) ? "yellow" : "red";
+                eLearnReport["totalpoints"] = totalpoints;
+                eLearnReport["userpoints"] = userpoints;
+                eLearnReport["pct"] = pct;
+                eLearnReport["minpct"] = eLearnMinPercent;
+                eLearnReport["color"] = pcolor;
+                eLearnReport["message"] = pct < eLearnMinPercent ? cljsv_ml.failed : cljsv_ml.passed;
+                return;
+            }
+        }
+        if (Obj.action === "CustomEnd" || Obj.action === "End" || Obj.action === "Exit") {
+            if (eLearnReport !== null && IsElearning) {
+                // cleanup before generating JSON string
+                eLearnReport.Obj["Url"] = self.location.href;
+                for (zstepname in eLearnReport.Steps) {
+                    var zstep = eLearnReport.Steps[zstepname];
+                    delete zstep["Url"];
+                    delete zstep["txtValue3"];
+                    delete zstep["intValue1"];
+                    delete zstep["start"];
+                    delete zstep["steps"];
+                    delete zstep["estimated"];
+                }
+                Obj["txtValue3"] = JSON.stringify(eLearnReport);
+            }
+        }
+        if (typeof (Obj.location) !== "undefined" && typeof (Obj.intValue1) === "undefined") {
+            Obj["intValue1"] = Obj.location;
+        }
+        var rpf;
+        if (typeof (CLLMSReportProgress) === "function") {
+            if (eLearnReport !== null && IsElearning) {
+                Obj["eLearnReport"] = eLearnReport;
+            }
+            var rv1 = CLLMSReportProgress(Obj);
+            if (eLearnReport !== null && IsElearning) {
+                Obj["eLearnReport"] = null;
+            }
+            return (rv1);
+        }
+        else if ((rpf = jsvFindParentObject("CLJSVReportProgress")) !== null) {
+            return (rpf(Obj, self.location.href));
+        }
+        else if (typeof (CLTrackingSend) === "function") {
+            Obj["Url"] = self.location.href;
+            CLTrackingSend(null, "playerreportprogress", document.title, Obj);
+        }
+    } catch (e) {
+        var emsg = e.message;
+    }
+    return (null);
+}
+
+        
+          var cljsv_ml = {
+          detaileval: "Detailed Evaluation",
+          no: "No.",
+          step: "Step",
+          points: "Points",
+          pct: "%",
+          totaleval: "Total Evaluation",
+          passed: "You have passed the test",
+          failed: "You have failed the test",
+          fbHeader: "Please give us your feedback",
+          fbExperienceQuestion: "How did you experience the learning material?",
+          fbRatingBad: "Bad",
+          fbRatingPoor: "Poor",
+          fbRatingAverage: "Average",
+          fbRatingGood: "Good",
+          fbRatingGreat: "Great",
+          fbCommentHeader: "Please add any comments",
+          fbSubmit: "Submit",
+          scormLocationMsg: "Would you like to continue from where you left off, being at the step: $1"
+          };
+        
+          /*SCORM_INSERT_SCRIPT*/
+          //--><!]]></script>
+        
+          </head>
+          <body onload="playClickLearnRecording('fit,interactive,startbutton',true);" onbeforeunload="playerExit();" onresize="playerResized();" data-clid="cljsv">
+        
+          <div style="display:flex;justify-content:center;height:100%;">
+          <div id="cljsv" style="display:none;align-self:center;">
+          <div style="margin:0 auto;">
+          <center>
+          <audio id="uiAudio" src="data:audio/mpeg;base64,/+MYxAAAAANIAAAAAExBTUUzLjk5LjNVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV/+MYxDsAAANIAAAAAFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV" loop="false" autoplay="false">
+          <embed id="uiAudio2" src="data:audio/mpeg;base64,/+MYxAAAAANIAAAAAExBTUUzLjk5LjNVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV/+MYxDsAAANIAAAAAFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV" width="0" heigth="0" style="display:none;"></embed>
+          </audio>
+          <audio id="uiAudioLoop" src="data:audio/mpeg;base64,/+MYxAAAAANIAAAAAExBTUUzLjk5LjNVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV/+MYxDsAAANIAAAAAFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV" loop="false" autoplay="false">
+          <embed id="uiAudioLoop2" src="data:audio/mpeg;base64,/+MYxAAAAANIAAAAAExBTUUzLjk5LjNVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV/+MYxDsAAANIAAAAAFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV" width="0" heigth="0" style="display:none;"></embed>
+          </audio>
+          <div id="uiPlayer" style="position:relative;border:solid 1px #a0a0a0;width:320px;height:200px;overflow:hidden;cursor:pointer;" onclick="playerClicked(event,0);" onmousemove="playerMouseMove(event,0);" oncontextmenu="playerRightClicked(event,0); return false;">
+          <div id="uiView" style="position:absolute;left:0px;top:0px;width:100%;height:100%;overflow:hidden;">
+          <div id="uiFrames" style="position:absolute;left:0px;top:0px;width:100%;height:100%;overflow:hidden;">
+          </div>
+          <div id="uiActionArea" style="position:absolute;border:solid 4px Red;width:64px;height:32px;z-index:9999992;" bw="4" onclick="playerClicked(event,1);" onmousemove="playerMouseMove(event,1);" oncontextmenu="playerRightClicked(event,1); return false;"></div>
+          <img id="uiCursor" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARKSURBVEhLrVXtT1tVGK8xfjCLWfxmVBITs0+a+Gn6BxgTM7+YQHtbYaUWYQGZC26L9N5bbimFDoQJbDLKWEYW6e3tG/RlXV+AbQorOFjtmlQRJmGsUwYzc+riC57jec7uJcUW59QnedLee899fuf3O7/nuSrGLM6oWal335HAa/t7Is+q3e5HVf9naDiXg+GdSMM576p5KVZp83N1ncFXaxyOx+Ql/y2q2gKvMybnj1qzG0OS/78ynHNZa5ZCxlZ/tX34syflpf8u3m8ZKWF4KQEsDvVGMXs8imrtI4iCAbNG589as2u4oTta2j2c3OVwzD4cM5Bir8XXUspJvx0+HsOJmQUUS86jweAsBasQJApGJLynNkuXK63+VrY//kZj30MwqyIHXMZL16vaRvGZcyn8efYGXln9AWeureILV5bwUXEKv23zUwm1ZnGjjJVyxBjT+9qDDdzH0RK5zPZx8MPYDqJ5TNfkxrbT51Hg0ywCkG9urKPlb79HN9fu4oXrayg+s4gtJ8dRfUdgkxmR8Rd1ozRVafVp+YHxFw63Tz4hl90aFS2+d+GFhq4QcsXTKDq9gJOZZQQgAKAALeVuo8n0EvokmkJNA+PYaPUiOCtijt/LTFJWw4oD77T5dXpb6BmVCj8il1epjMLo0wCgb/ZRmSKXvsYAAkygcLHMLt3Ck+llfCo0h6vto7KEwEpcJ8ZJ6ljpZbn8/dCwrgDspulEHAFAkEgFqcgFRYGJkso1yCeNZbDB4qFsSD+l9RaPrqCX6jpD5eAmoB2emt8EUORaWb1TAJCaz6E+7zR6S/BgeBcs/153ZLdccmsIg+dfJIvmYRdDZ1ObAMAmPPklZZIPMPdVDgv9cVQuuGDn9zSceOJQT+R5uVxhHDwT20F64piadf9h6ovjs4QFFM/P+xa+Q8+gdegihp2D7sTGvf+oCfcfjZST7r1d2xHEw9EvNhnkM1HcdXXxO2w9NUHkcZFZ5rpWbQ+WPhCEa4mWkCa6srfZi3vcyQIGkIq7coQFgFgGJ6ABKYihbWSPXGr7MNh87UDbdOwc8k5k6M6h+cCOwskx5BnPbHHX4so6AhDKhMwug9W7p+bvmBiafbsBoIq4aSg8RwHgt74rjOFABUeCguQ341/lMtpGSrcFgQeMSbwKIDCH/BeymO1PYBglcK+cHKxAdvxAuQgTuWRh6HjxA2K9DZg78BJYl7x4S2/1fERGwhpcA0gxueA+gKg5KS2XK4yK5tFXSGevwELYOXzxyDg4AFY2Wv0HAIQyKSIXjA9lRsnlCqOuI/wUjA6QhIBswKe15khiJzwDEGU4FpMLUplNtNh2AUVIZ/+k5SV3rT1c8IGB54pcvGMMDwYuo9PhWSoR3AO7y0uLRwXve4ksCjGcWLT98+WC3eoFN4KBB/8J45v1nUFGXlo8YBoygvicfFk0qFyC903FdZBkXKdq24NMl3Tp8T8BYWwOt3c6rVIAAAAASUVORK5CYII=" style="position:absolute;"/>
+          </div>
+          <div id="uiPauseImage" style="position:absolute;top:0px;left:0px;width:100%;height:100%;background:black;opacity:0.5;display:none;">
+          <div id="uiPauseImage1" style="position:absolute;left:42%;top:30%;width:5%;height:40%;background-color:white;"></div>
+          <div id="uiPauseImage2" style="position:absolute;right:42%;top:30%;width:5%;height:40%;background-color:white;"></div>
+          </div>
+          <table id="uiChapter" class="cljsvChapter">
+          <tr>
+          <td align="center" valign="top">
+          <img id="uiChapterImage" src="" style="width:60%;margin-top:50px;"/><br/>
+          <div id="uiChapterText" class="cljsvChapterText">Chapter</div>
+          </td>
+          </tr>
+          </table>
+          <!--
+          <table id="uiBalloon" style="position:absolute;top:0px;left:0px;">
+          <tr>
+          <td align="center" valign="bottom">
+          <div id="uiBalloonText" style="border:solid 2px white;background:blue;color:white;text-align:center;display:inline-block;padding:4px;opacity:0.80;">Test</div>
+          </td>
+          </tr>
+          </table>
+          -->
+          <table id="uiNote" style="position:absolute;top:0px;left:0px;width:100%;height:100%;">
+          <tr>
+          <td align="center" valign="bottom">
+          <div id="uiNoteText" class="cljsvNoteText"></div>
+          </td>
+          </tr>
+          </table>
+          <table id="uiIntroTitle" style="position:absolute;top:0px;left:0px;width:100%;height:100%;">
+          <tr>
+          <td align="left" valign="bottom">
+          <div id="uiIntroTitleText" class="cljsvIntroTitleText"></div>
+          </td>
+          </tr>
+          </table>
+          <div id="uiFinal" style="display:none;width:100%;height:100%;position:absolute;left:0px;top:0px;"></div>
+          <div id="uiFinal_interactive" style="display:none;width:100%;height:100%;position:absolute;left:0px;top:0px;"></div>
+          <div id="uiFinal_elearn" style="display:none;width:100%;height:100%;position:absolute;left:0px;top:0px;"></div>
+          <div id="clvc_control" class="clvccontrol" onmouseout="playerTimelineControl(event, -1);">
+          <div id="clvc_tlp1" style="position:absolute;left:0;top:0px;height:3px;background:red;width:0;"></div>
+          <div id="clvc_tlp2" style="position:absolute;top:-4px;left:4px;border-radius:4px;width:8px;height:8px;border:solid 1px red;background:red;display:none;"></div>
+          <div id="clvc_timeline" style="position:absolute;left:0;top:0px;height:3px;background:white;opacity:0.0;width:100%;" onmouseout="playerTimelineControl(event, 0);" onmousemove="playerTimelineControl(event, 1);" onclick="playerTimelineControl(event, 2);">
+          </div>
+          <div id="clvc_group1" style="float:left;margin-left:4px;margin-top:4px;">
+          <span id="clvc_play" class="clvcicon clvcplay_off" onclick="playerDoControl(event,'p');"></span>
+          <span id="clvc_sound" class="clvcicon clvcsound_on" onclick="playerDoControl(event,'a');"></span>
+          <div id="clvc_chapters" class="clvcpopup clvcchapters" onclick="playerIgnoreClick(event);"></div>
+          <span id="clvc_next" class="clvcicon clvcnext" onclick="playerDoControl(event,'n');"></span>
+          </div>
+          <div id="clvc_group3" style="float:left;margin-left:4px;margin-top:4px;">
+          <div id="clvc_comments" class="clvcpopup" onclick="playerIgnoreClick(event);"></div>
+          <span id="clvc_input" class="clvcicon clvcinput" style="display:none;" onclick="playerDoControl(event,'i');"></span>
+          </div>
+          <div id="clvc_group2" style="float:right;margin-right:4px;margin-top:4px;">
+          <span id="clvc_info" class="clvcinfo"></span>
+          <span id="clvc_subtitles" class="" onclick="playerDoControl(event,'t');"></span>
+          <span id="clvc_scale" class="clvcicon clvcscale_off" onclick="playerDoControl(event,'s');"></span>
+          <span id="clvc_fullscreen" class="clvcicon clvcfullscreen_on" onclick="playerDoControl(event,'f');"></span>
+          </div>
+          </div>
+          <div id="uiEmbeddedVideo" style="display:none;width:100%;height:100%;position:absolute;left:0px;top:0px;"></div>
+          <div id="uiQuestion" class="cljsvQuestion">
+          <div id="clvcquestion" style="text-align:left;width:600px;opacity:1.0;padding:4px;background-color:#4D98CE;color:white;border:solid 2px #404040;border-radius:4px;margin-top:200px;">
+          <div>
+          <table width="100%"><tr>
+          <td align="top">
+          <div id="clvcquestion_img"></div>
+          </td>
+          <td align="top" id="clvcquestion_text">
+          Question?
+          </td>
+          </tr></table>
+          </div>
+          <br/>
+          <div id="clvcquestion_options">Options</div>
+          <div id="clvcquestion_answers" style="text-align:right;">Buttons for answers</div>
+          </div>
+        </div>
+          </div>
+          </center>
+          <code id="ActionsTxt" style="display:none;">Name=ifsapps9££Description=££FrameWidth=1360££FrameHeight=768££ViewWidth=1024££ViewHeight=576££FramesPerSecond=24££LCID=1033££TXT_STARTALLOWANYSEQUENCE=Please perform the following:££TXT_ENDALLOWANYSEQUENCE=and complete by:££Intro=cl-intro.jpg££Outro=cl-outro.jpg££</code>
+          </div>
+          </div>
+          </div>
+        
+          </body>
+          </html>
+        
